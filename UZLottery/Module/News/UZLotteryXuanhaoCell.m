@@ -49,7 +49,7 @@
     _lotteryType = lotteryType;
     if (lotteryType == UZLotteryType_DaLeTou) {
         self.icon.image = [UIImage imageNamed:@"home_icon_10"];
-        self.titleLb.text = @"大乐透";
+        self.titleLb.text = @"超级大乐透";
     } else {
         self.icon.image = [UIImage imageNamed:@"home_icon_20"];
         self.titleLb.text = @"11选5";

@@ -8,6 +8,7 @@
 
 #import "UZAppStartUp.h"
 #import "UZLotteryNewsVC.h"
+#import "UZLotteryXuanhaoVC.h"
 
 @interface UZAppStartUp()
 
@@ -37,7 +38,7 @@
         UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"选号"
                                                            image:normalImage
                                                    selectedImage:highlightImage];
-        UZLotteryNewsVC *firstVC = [[UZLotteryNewsVC alloc] init];
+        UZLotteryXuanhaoVC *firstVC = [[UZLotteryXuanhaoVC alloc] init];
         firstVC.tabBarItem = item;
         UINavigationController *firstNavi = [[UINavigationController alloc] initWithRootViewController:firstVC];
         

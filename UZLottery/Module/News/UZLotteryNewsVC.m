@@ -31,6 +31,7 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.rowHeight = 80.f;
+    tableView.tableFooterView = [[UIView alloc] init];
     [tableView registerClass:[UZLotteryNewsCell class] forCellReuseIdentifier:NSStringFromClass([UZLotteryNewsCell class])];
     [self.view addSubview:tableView];
     tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self

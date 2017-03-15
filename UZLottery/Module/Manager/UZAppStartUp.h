@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface UZAppStartUp : NSObject
+
+@property (nonatomic, strong, readonly) UITabBarController *rootViewController;
+
++ (instancetype)sharedStartUp;
 
 @end

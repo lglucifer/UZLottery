@@ -10,4 +10,18 @@
 
 @implementation JSONValueTransformer (NSString)
 
+- (NSDate *)NSDateFromNSString:(NSString*)string {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[string doubleValue]];
+//    return [formatter dateFromString:string];
+    return date;
+}
+
+- (NSString *)JSONObjectFromNSDate:(NSDate *)date {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    return [formatter stringFromDate:date];
+}
+
 @end

@@ -10,4 +10,6 @@
 
 @interface UZLotteryDetailVC : UIViewController
 
+@property (nonatomic, copy) NSString *link;
+
 @end

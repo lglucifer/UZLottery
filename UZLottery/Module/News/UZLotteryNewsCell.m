@@ -8,17 +8,51 @@
 
 #import "UZLotteryNewsCell.h"
 
+@interface UZLotteryNewsCell()
+
+@property (nonatomic, weak) UILabel *titleLb;
+
+@property (nonatomic, weak) UILabel *dateLb;
+
+@end
+
 @implementation UZLotteryNewsCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        UILabel *titleLb = [[UILabel alloc] init];
+        titleLb.font = [UIFont boldSystemFontOfSize:18];
+        titleLb.numberOfLines = 2;
+        titleLb.preferredMaxLayoutWidth = SCREEN_WIDTH - 20;
+        titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
+        [self.contentView addSubview:titleLb];
+        self.titleLb = titleLb;
+        [self.titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.contentView).mas_offset(10);
+            make.top.mas_equalTo(self.contentView).mas_offset(10);
+            make.right.mas_equalTo(self.contentView).mas_offset(-10);
+        }];
+        
+        UILabel *dateLb = [[UILabel alloc] init];
+        dateLb.font = [UIFont systemFontOfSize:12];
+        dateLb.textColor = [UIColor colorWithRGB:0xa5a5a5];
+        [self.contentView addSubview:dateLb];
+        self.dateLb = dateLb;
+        [dateLb mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(self.contentView).mas_offset(-10);
+            make.bottom.mas_equalTo(self.contentView).mas_offset(-10);
+        }];
+    }
+    return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setNews:(UZLotteryNews *)news {
+    if (!news) {
+        return;
+    }
+    _news = news;
+    self.titleLb.text = news.title;
+    self.dateLb.text = [NSString stringWithFormat:@"%@", news.createdTime];
 }
 
 @end

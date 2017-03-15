@@ -10,4 +10,16 @@
 
 @implementation UZLotteryModel
 
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
+
+@end
+
+@implementation UZLotteryNews
+
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"newsId": @"id", @"createdTime": @"created_at"}];
+}
+
 @end

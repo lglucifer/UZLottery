@@ -10,4 +10,7 @@
 
 @interface UZSessionManager : AFHTTPSessionManager
 
+- (NSURLSessionDataTask *)requestLotteryNewsSuccess:(void(^)(NSArray *news, NSURLSessionDataTask *dataTask))success
+                                            failure:(void(^)(NSError *error, NSURLSessionDataTask *dataTask))failure;
+
 @end

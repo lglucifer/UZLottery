@@ -11,3 +11,12 @@
 @interface UZLotteryModel : JSONModel
 
 @end
+
+@interface UZLotteryNews : UZLotteryModel
+
+@property (nonatomic, copy) NSString *newsId;
+@property (nonatomic, copy) NSString *link;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, strong) NSDate *createdTime;
+
+@end

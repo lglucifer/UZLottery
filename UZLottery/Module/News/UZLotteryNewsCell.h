@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UZLotteryModel.h"
 
 @interface UZLotteryNewsCell : UITableViewCell
+
+@property (nonatomic, strong) UZLotteryNews *news;
 
 @end

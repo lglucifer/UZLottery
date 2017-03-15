@@ -23,3 +23,11 @@
 }
 
 @end
+
+@implementation UZLotteryMedia
+
+@end
+
+@implementation UZLotteryAppLaunch
+
+@end

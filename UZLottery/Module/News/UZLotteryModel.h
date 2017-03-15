@@ -20,3 +20,26 @@
 @property (nonatomic, strong) NSDate *createdTime;
 
 @end
+
+@protocol UZLotteryMedia <NSObject>
+
+@end
+
+@interface UZLotteryMedia : UZLotteryModel
+
+@property (nonatomic, copy) NSString *img;
+@property (nonatomic, copy) NSString *url;
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) BOOL can_close;
+
+@end
+
+@interface UZLotteryAppLaunch : UZLotteryModel
+
+@property (nonatomic, strong) UZLotteryMedia *logo;
+@property (nonatomic, strong) UZLotteryMedia *launch;
+@property (nonatomic, strong) UZLotteryMedia *screen;
+@property (nonatomic, copy) NSArray<UZLotteryMedia> *intro;
+
+@end

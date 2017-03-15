@@ -7,7 +7,6 @@
 //
 
 #import "UZSessionManager.h"
-#import "UZLotteryModel.h"
 
 NSInteger kUZAppDefaultErrorCode    = 9999;
 NSInteger kUZAppRequestCancelCode   = -999;
@@ -88,6 +87,20 @@ NSInteger kUZAppRequestCancelCode   = -999;
                //               failure(task, error, NO);
            }
        }];
+}
+
+- (NSURLSessionDataTask *)requestLotteryInfoSuccess:(void(^)(UZLotteryAppLaunch *appLaunch, NSURLSessionDataTask *dataTask))success
+                                            failure:(void(^)(NSError *error, NSURLSessionDataTask *dataTask))failure {
+    return
+    [self uz_POST:@"http://ningweb.com/lottery/api/index.php/nightkiss/getAppDetail/?id=1445"
+       parameters:nil
+          success:^(NSURLSessionDataTask *task, id responseObject) {
+              UZLotteryAppLaunch *appLaunch = [[UZLotteryAppLaunch alloc] initWithDictionary:responseObject
+                                                                                       error:nil];
+              success(appLaunch, task);
+          } failure:^(NSURLSessionDataTask *task, NSError *error, BOOL needsShowHUD) {
+              failure(error, task);
+          }];
 }
 
 - (NSURLSessionDataTask *)requestLotteryNewsWithPageType:(NSInteger)pageType

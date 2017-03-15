@@ -9,10 +9,13 @@
 #import "UZAppStartUp.h"
 #import "UZLotteryNewsVC.h"
 #import "UZLotteryXuanhaoVC.h"
+#import "UZLotteryAppLaunchVC.h"
 
 @interface UZAppStartUp()
 
 @property (nonatomic, strong, readwrite) UITabBarController *rootViewController;
+
+@property (nonatomic, strong) UZLotteryAppLaunchVC *appLaunchVC;
 
 @end
 
@@ -66,6 +69,9 @@
         tabBarController.viewControllers = @[firstNavi, secondNavi, thirdNavi];
         tabBarController.selectedIndex = 1;
         self.rootViewController = tabBarController;
+        
+        self.appLaunchVC = [[UZLotteryAppLaunchVC alloc] init];
+        [tabBarController.view addSubview:self.appLaunchVC.view];
     }
     return self;
 }

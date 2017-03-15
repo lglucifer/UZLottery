@@ -16,6 +16,8 @@
 
 #import "Masonry.h"
 #import "MJRefresh.h"
+#import "NSObject+HUD.h"
+#import "UIImageView+WebCache.h"
 
 #define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
 #define SCREEN_Height    [UIScreen mainScreen].bounds.size.height

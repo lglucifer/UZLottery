@@ -105,6 +105,10 @@
 		2EFFC9351E78D40C0010FD7D /* UZLotteryXuanhaoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC9341E78D40C0010FD7D /* UZLotteryXuanhaoVC.m */; };
 		2EFFC9381E78D4540010FD7D /* UZLotteryXuanhaoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC9371E78D4540010FD7D /* UZLotteryXuanhaoCell.m */; };
 		2EFFC93B1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC93A1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m */; };
+		2EFFC93E1E78DDCA0010FD7D /* UZLotteryAppLaunchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC93D1E78DDCA0010FD7D /* UZLotteryAppLaunchVC.m */; };
+		2EFFC9431E78DFA60010FD7D /* MBProgressHUD+CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC9401E78DFA60010FD7D /* MBProgressHUD+CustomView.m */; };
+		2EFFC9441E78DFA60010FD7D /* NSObject+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC9421E78DFA60010FD7D /* NSObject+HUD.m */; };
+		2EFFC9471E78E5B80010FD7D /* UZLotteryMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC9461E78E5B80010FD7D /* UZLotteryMediaView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -333,6 +337,14 @@
 		2EFFC9371E78D4540010FD7D /* UZLotteryXuanhaoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZLotteryXuanhaoCell.m; sourceTree = "<group>"; };
 		2EFFC9391E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZLotteryXuanhaoDetailVC.h; sourceTree = "<group>"; };
 		2EFFC93A1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZLotteryXuanhaoDetailVC.m; sourceTree = "<group>"; };
+		2EFFC93C1E78DDCA0010FD7D /* UZLotteryAppLaunchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZLotteryAppLaunchVC.h; sourceTree = "<group>"; };
+		2EFFC93D1E78DDCA0010FD7D /* UZLotteryAppLaunchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZLotteryAppLaunchVC.m; sourceTree = "<group>"; };
+		2EFFC93F1E78DFA60010FD7D /* MBProgressHUD+CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+CustomView.h"; sourceTree = "<group>"; };
+		2EFFC9401E78DFA60010FD7D /* MBProgressHUD+CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+CustomView.m"; sourceTree = "<group>"; };
+		2EFFC9411E78DFA60010FD7D /* NSObject+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HUD.h"; sourceTree = "<group>"; };
+		2EFFC9421E78DFA60010FD7D /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
+		2EFFC9451E78E5B80010FD7D /* UZLotteryMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZLotteryMediaView.h; sourceTree = "<group>"; };
+		2EFFC9461E78E5B80010FD7D /* UZLotteryMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZLotteryMediaView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -783,6 +795,10 @@
 		2EDB7B0E1E7634A00068F544 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				2EFFC93F1E78DFA60010FD7D /* MBProgressHUD+CustomView.h */,
+				2EFFC9401E78DFA60010FD7D /* MBProgressHUD+CustomView.m */,
+				2EFFC9411E78DFA60010FD7D /* NSObject+HUD.h */,
+				2EFFC9421E78DFA60010FD7D /* NSObject+HUD.m */,
 				2EDB7B101E7634B30068F544 /* UZAppStartUp.h */,
 				2EDB7B111E7634B30068F544 /* UZAppStartUp.m */,
 				2EDB7B161E76362A0068F544 /* UZSessionManager.h */,
@@ -810,6 +826,10 @@
 				2EDB7B211E763C970068F544 /* UZLotteryModel.m */,
 				2EDB7B2D1E7649AA0068F544 /* JSONValueTransformer+NSString.h */,
 				2EDB7B2E1E7649AA0068F544 /* JSONValueTransformer+NSString.m */,
+				2EFFC93C1E78DDCA0010FD7D /* UZLotteryAppLaunchVC.h */,
+				2EFFC93D1E78DDCA0010FD7D /* UZLotteryAppLaunchVC.m */,
+				2EFFC9451E78E5B80010FD7D /* UZLotteryMediaView.h */,
+				2EFFC9461E78E5B80010FD7D /* UZLotteryMediaView.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -890,8 +910,8 @@
 				TargetAttributes = {
 					2EDB79BA1E7632010068F544 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 89P9DJMTGN;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 4225KQ7WC5;
+						ProvisioningStyle = Manual;
 					};
 					2EDB79D31E7632020068F544 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -971,6 +991,7 @@
 				2EDB7ABC1E76344C0068F544 /* AFSecurityPolicy.m in Sources */,
 				2EDB7AF51E76344C0068F544 /* SDWebImageCompat.m in Sources */,
 				2EDB7AF61E76344C0068F544 /* SDWebImageDecoder.m in Sources */,
+				2EFFC9471E78E5B80010FD7D /* UZLotteryMediaView.m in Sources */,
 				2EDB79C31E7632020068F544 /* AppDelegate.m in Sources */,
 				2EDB7ADE1E76344C0068F544 /* MJRefreshComponent.m in Sources */,
 				2EDB7B121E7634B30068F544 /* UZAppStartUp.m in Sources */,
@@ -978,8 +999,10 @@
 				2EDB7ADF1E76344C0068F544 /* MJRefreshFooter.m in Sources */,
 				2EDB7AC61E76344C0068F544 /* UIProgressView+AFNetworking.m in Sources */,
 				2EDB7AF11E76344C0068F544 /* NSData+ImageContentType.m in Sources */,
+				2EFFC93E1E78DDCA0010FD7D /* UZLotteryAppLaunchVC.m in Sources */,
 				2EDB7B071E76344C0068F544 /* NSNumber+YYAdd.m in Sources */,
 				2EDB7AC21E76344C0068F544 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				2EFFC9441E78DFA60010FD7D /* NSObject+HUD.m in Sources */,
 				2EDB7B1F1E763A1B0068F544 /* UZLotteryRedirectVC.m in Sources */,
 				2EDB7AE41E76344C0068F544 /* MJRefreshBackGifFooter.m in Sources */,
 				2EDB7AF81E76344C0068F544 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1029,6 +1052,7 @@
 				2EDB7AEB1E76344C0068F544 /* MJRefreshConst.m in Sources */,
 				2EDB7AFC1E76344C0068F544 /* UIImage+GIF.m in Sources */,
 				2EDB7B011E76344C0068F544 /* UIView+WebCache.m in Sources */,
+				2EFFC9431E78DFA60010FD7D /* MBProgressHUD+CustomView.m in Sources */,
 				2EDB7AE71E76344C0068F544 /* MJRefreshGifHeader.m in Sources */,
 				2EDB7ACF1E76344C0068F544 /* JSONKeyMapper.m in Sources */,
 				2EDB7ABE1E76344C0068F544 /* AFURLResponseSerialization.m in Sources */,
@@ -1189,12 +1213,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 89P9DJMTGN;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 新乐 陶 (FW6Z6VP9Q5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 新乐 陶 (FW6Z6VP9Q5)";
+				DEVELOPMENT_TEAM = 4225KQ7WC5;
 				GCC_PREFIX_HEADER = UZLottery/UZLottery.pch;
 				INFOPLIST_FILE = UZLottery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uzero.UZLottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uzero.caipiaowht;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b1f1ada6-7372-49d4-8fbb-e8142e4eb598";
+				PROVISIONING_PROFILE_SPECIFIER = caipiaodev;
 			};
 			name = Debug;
 		};
@@ -1202,12 +1230,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 89P9DJMTGN;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Xinle Tao (4225KQ7WC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xinle Tao (4225KQ7WC5)";
+				DEVELOPMENT_TEAM = 4225KQ7WC5;
 				GCC_PREFIX_HEADER = UZLottery/UZLottery.pch;
 				INFOPLIST_FILE = UZLottery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.uzero.UZLottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uzero.caipiaowht;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "92cdca63-e3d9-4bf2-bb43-20805fca12fb";
+				PROVISIONING_PROFILE_SPECIFIER = caipiaoAdhoc;
 			};
 			name = Release;
 		};

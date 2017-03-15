@@ -28,6 +28,10 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, -3)];
+        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRGB:0xdbdbdb], NSFontAttributeName:[UIFont systemFontOfSize:10]} forState:UIControlStateNormal];
+        [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRGB:0xd81e06], NSFontAttributeName:[UIFont systemFontOfSize:10]} forState:UIControlStateSelected];
+
         UIImage *normalImage = [[UIImage imageNamed:@"xuanhao_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UIImage *highlightImage = [[UIImage imageNamed:@"xuanhao_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"选号"
@@ -37,8 +41,8 @@
         firstVC.tabBarItem = item;
         UINavigationController *firstNavi = [[UINavigationController alloc] initWithRootViewController:firstVC];
         
-        normalImage = [[UIImage imageNamed:@"zixun_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        highlightImage = [[UIImage imageNamed:@"zixun_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        normalImage = [[UIImage imageNamed:@"xinwen_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        highlightImage = [[UIImage imageNamed:@"xinwen_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         item = [[UITabBarItem alloc] initWithTitle:@"咨询"
                                              image:normalImage
                                      selectedImage:highlightImage];
@@ -53,6 +57,7 @@
                                              image:normalImage
                                      selectedImage:highlightImage];
         UZLotteryNewsVC *thirdVC = [[UZLotteryNewsVC alloc] init];
+        thirdVC.tabBarItem = item;
         secondVC.pageType = UZLotteryNewsType_Page2;
         UINavigationController *thirdNavi = [[UINavigationController alloc] initWithRootViewController:thirdVC];
         

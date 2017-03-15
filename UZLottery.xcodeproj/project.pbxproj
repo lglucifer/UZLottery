@@ -1213,8 +1213,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 新乐 陶 (FW6Z6VP9Q5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 新乐 陶 (FW6Z6VP9Q5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xinle Tao (CUVR22NJYL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xinle Tao (CUVR22NJYL)";
 				DEVELOPMENT_TEAM = 4225KQ7WC5;
 				GCC_PREFIX_HEADER = UZLottery/UZLottery.pch;
 				INFOPLIST_FILE = UZLottery/Info.plist;

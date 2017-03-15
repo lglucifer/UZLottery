@@ -22,7 +22,7 @@
 @implementation UZLotteryNewsVC
 
 - (NSString *)title {
-    return self.tabBarItem.title;
+    return self.pageType == UZLotteryNewsType_Page1 ? @"咨询" : @"行业动态";
 }
 
 - (void)viewDidLoad {

@@ -102,6 +102,9 @@
 		2EDB7B221E763C970068F544 /* UZLotteryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDB7B211E763C970068F544 /* UZLotteryModel.m */; };
 		2EDB7B2F1E7649AA0068F544 /* JSONValueTransformer+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDB7B2E1E7649AA0068F544 /* JSONValueTransformer+NSString.m */; };
 		2EDB7B321E7662B90068F544 /* UZLotteryDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDB7B311E7662B90068F544 /* UZLotteryDetailVC.m */; };
+		2EFFC9351E78D40C0010FD7D /* UZLotteryXuanhaoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC9341E78D40C0010FD7D /* UZLotteryXuanhaoVC.m */; };
+		2EFFC9381E78D4540010FD7D /* UZLotteryXuanhaoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC9371E78D4540010FD7D /* UZLotteryXuanhaoCell.m */; };
+		2EFFC93B1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC93A1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -324,6 +327,12 @@
 		2EDB7B2E1E7649AA0068F544 /* JSONValueTransformer+NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+NSString.m"; sourceTree = "<group>"; };
 		2EDB7B301E7662B90068F544 /* UZLotteryDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZLotteryDetailVC.h; sourceTree = "<group>"; };
 		2EDB7B311E7662B90068F544 /* UZLotteryDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZLotteryDetailVC.m; sourceTree = "<group>"; };
+		2EFFC9331E78D40C0010FD7D /* UZLotteryXuanhaoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZLotteryXuanhaoVC.h; sourceTree = "<group>"; };
+		2EFFC9341E78D40C0010FD7D /* UZLotteryXuanhaoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZLotteryXuanhaoVC.m; sourceTree = "<group>"; };
+		2EFFC9361E78D4540010FD7D /* UZLotteryXuanhaoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZLotteryXuanhaoCell.h; sourceTree = "<group>"; };
+		2EFFC9371E78D4540010FD7D /* UZLotteryXuanhaoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZLotteryXuanhaoCell.m; sourceTree = "<group>"; };
+		2EFFC9391E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZLotteryXuanhaoDetailVC.h; sourceTree = "<group>"; };
+		2EFFC93A1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZLotteryXuanhaoDetailVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -785,6 +794,12 @@
 		2EDB7B0F1E7634A00068F544 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				2EFFC9331E78D40C0010FD7D /* UZLotteryXuanhaoVC.h */,
+				2EFFC9341E78D40C0010FD7D /* UZLotteryXuanhaoVC.m */,
+				2EFFC9361E78D4540010FD7D /* UZLotteryXuanhaoCell.h */,
+				2EFFC9371E78D4540010FD7D /* UZLotteryXuanhaoCell.m */,
+				2EFFC9391E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.h */,
+				2EFFC93A1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m */,
 				2EDB7B131E7635430068F544 /* UZLotteryNewsVC.h */,
 				2EDB7B141E7635430068F544 /* UZLotteryNewsVC.m */,
 				2EDB7B301E7662B90068F544 /* UZLotteryDetailVC.h */,
@@ -984,8 +999,10 @@
 				2EDB7AFB1E76344C0068F544 /* UIButton+WebCache.m in Sources */,
 				2EDB7B181E76362A0068F544 /* UZSessionManager.m in Sources */,
 				2EDB7AC51E76344C0068F544 /* UIImageView+AFNetworking.m in Sources */,
+				2EFFC9351E78D40C0010FD7D /* UZLotteryXuanhaoVC.m in Sources */,
 				2EDB7AD41E76344C0068F544 /* MASLayoutConstraint.m in Sources */,
 				2EDB7AF01E76344C0068F544 /* MKAnnotationView+WebCache.m in Sources */,
+				2EFFC93B1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m in Sources */,
 				2EDB7B021E76344C0068F544 /* UIView+WebCacheOperation.m in Sources */,
 				2EDB7B031E76344C0068F544 /* NSData+YYAdd.m in Sources */,
 				2EDB7ABD1E76344C0068F544 /* AFURLRequestSerialization.m in Sources */,
@@ -1017,6 +1034,7 @@
 				2EDB7ABE1E76344C0068F544 /* AFURLResponseSerialization.m in Sources */,
 				2EDB7AD61E76344C0068F544 /* MASViewConstraint.m in Sources */,
 				2EDB7AED1E76344C0068F544 /* UIScrollView+MJExtension.m in Sources */,
+				2EFFC9381E78D4540010FD7D /* UZLotteryXuanhaoCell.m in Sources */,
 				2EDB7AE21E76344C0068F544 /* MJRefreshAutoNormalFooter.m in Sources */,
 				2EDB7AC91E76344C0068F544 /* JSONModel.m in Sources */,
 				2EDB7AF31E76344C0068F544 /* SDImageCache.m in Sources */,

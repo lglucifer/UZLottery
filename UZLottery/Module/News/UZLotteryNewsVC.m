@@ -21,6 +21,10 @@
 
 @implementation UZLotteryNewsVC
 
+- (NSString *)title {
+    return self.tabBarItem.title;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     UITableView *tableView = [[UITableView alloc] init];
@@ -47,13 +51,14 @@
 
 - (void)inner_Refresh {
     __weak __typeof(self) weakSelf = self;
-    [[UZSessionManager manager] requestLotteryNewsSuccess:^(NSArray *news, NSURLSessionDataTask *dataTask) {
-        weakSelf.items = news;
-        [weakSelf.tableView.mj_header endRefreshing];
-        [weakSelf.tableView reloadData];
-    } failure:^(NSError *error, NSURLSessionDataTask *dataTask) {
-        [weakSelf.tableView.mj_header endRefreshing];
-    }];
+    [[UZSessionManager manager] requestLotteryNewsWithPageType:self.pageType
+                                                       Success:^(NSArray *news, NSURLSessionDataTask *dataTask) {
+                                                           weakSelf.items = news;
+                                                           [weakSelf.tableView.mj_header endRefreshing];
+                                                           [weakSelf.tableView reloadData];
+                                                       } failure:^(NSError *error, NSURLSessionDataTask *dataTask) {
+                                                           [weakSelf.tableView.mj_header endRefreshing];
+                                                       }];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -90,10 +90,17 @@ NSInteger kUZAppRequestCancelCode   = -999;
        }];
 }
 
-- (NSURLSessionDataTask *)requestLotteryNewsSuccess:(void(^)(NSArray *news, NSURLSessionDataTask *dataTask))success
-                                            failure:(void(^)(NSError *error, NSURLSessionDataTask *dataTask))failure {
+- (NSURLSessionDataTask *)requestLotteryNewsWithPageType:(NSInteger)pageType
+                                                 Success:(void(^)(NSArray *news, NSURLSessionDataTask *dataTask))success
+                                                 failure:(void(^)(NSError *error, NSURLSessionDataTask *dataTask))failure {
+    NSString *URLPath = @"";
+    if (pageType == 0) {
+        URLPath = @"http://ningweb.com/lottery/api/index.php/nightkiss/getAllNews?page=0";
+    } else if (pageType == 1) {
+        URLPath = @"http://ningweb.com/lottery/api/index.php/nightkiss/getAllNews?page=1";
+    }
     return
-    [self uz_POST:@"http://ningweb.com/lottery/api/index.php/nightkiss/getAllNews"
+    [self uz_POST:URLPath
        parameters:nil
           success:^(NSURLSessionDataTask *task, id responseObject) {
               NSArray *items = [UZLotteryNews arrayOfModelsFromDictionaries:responseObject

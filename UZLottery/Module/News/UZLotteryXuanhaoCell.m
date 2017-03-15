@@ -38,8 +38,8 @@
         self.titleLb = titleLb;
         [self.titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.icon.mas_right).mas_offset(10);
-            make.top.mas_equalTo(self.contentView).mas_offset(10);
             make.right.mas_equalTo(self.contentView).mas_offset(-10);
+            make.centerY.equalTo(self.contentView);
         }];
     }
     return self;

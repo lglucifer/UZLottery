@@ -18,6 +18,37 @@
 #import "MJRefresh.h"
 #import "NSObject+HUD.h"
 #import "UIImageView+WebCache.h"
+#import "UIColor+WebColor.h"
+
+#define is_iPad  [[UIDevice currentDevice].model rangeOfString:@"iPad"]
+
+#define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)) : NO)
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size)) : NO)
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define VersionNumber_iOS_10  [[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0
+#define VersionNumber_iOS_8  [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0
+#define VersionNumber_iOS_7  [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 //floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1
+#define kScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define kScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+// -- 全局颜色
+#define kBackgroundGlobalRedColor         [UIColor colorRGBWithRed:193.f green:43.f blue:53.f alpha:1.f]
+#define kBackgroundGlobalDarkColor        [UIColor colorRGBWithRed:241.f green:241.f blue:241.f alpha:1.f]
+#define kFotterViewBackgroundGlobalColor  [UIColor colorRGBWithRed:82.f green:82.f blue:82.f alpha:1.f]
+
+//---红球、篮球颜色
+#define kDisplayRedBallColor     [UIColor colorRGBWithRed:166.f green:0 blue:0 alpha:1.f]
+#define kDisplayBlueBallColor    [UIColor colorRGBWithRed:12.f green:52.f blue:174.f alpha:1.f]
+
+
+//---- 投注号码的分隔符
+#define kBetNumbersSeparator1            @"+"
+#define kBetNumbersSeparator2            @"-"
+#define kBetNumbersSeparator3            @"@"
+#define kBetNumbersDisplaySeparator      @" "
+
 
 #define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
 #define SCREEN_Height    [UIScreen mainScreen].bounds.size.height

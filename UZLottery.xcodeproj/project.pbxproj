@@ -109,6 +109,23 @@
 		2EFFC9431E78DFA60010FD7D /* MBProgressHUD+CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC9401E78DFA60010FD7D /* MBProgressHUD+CustomView.m */; };
 		2EFFC9441E78DFA60010FD7D /* NSObject+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC9421E78DFA60010FD7D /* NSObject+HUD.m */; };
 		2EFFC9471E78E5B80010FD7D /* UZLotteryMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFC9461E78E5B80010FD7D /* UZLotteryMediaView.m */; };
+		973C60A81E7A0EE000C909EA /* DLTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60A71E7A0EE000C909EA /* DLTViewController.m */; };
+		973C61041E7A1D2800C909EA /* BallsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60E21E7A1D2800C909EA /* BallsCollectionViewCell.m */; };
+		973C61051E7A1D2800C909EA /* BallSizeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60E41E7A1D2800C909EA /* BallSizeConfig.m */; };
+		973C61061E7A1D2800C909EA /* BetFooterButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60E61E7A1D2800C909EA /* BetFooterButtonView.m */; };
+		973C61071E7A1D2800C909EA /* CombineArithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60E91E7A1D2800C909EA /* CombineArithmetic.m */; };
+		973C61081E7A1D2800C909EA /* CSLCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60EB1E7A1D2800C909EA /* CSLCNavigationController.m */; };
+		973C61091E7A1D2800C909EA /* DLTNumbersTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60ED1E7A1D2800C909EA /* DLTNumbersTableView.m */; };
+		973C610A1E7A1D2800C909EA /* DLTNumbersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60EF1E7A1D2800C909EA /* DLTNumbersTableViewCell.m */; };
+		973C610B1E7A1D2800C909EA /* GameBetContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60F21E7A1D2800C909EA /* GameBetContent.m */; };
+		973C610C1E7A1D2800C909EA /* GameBetFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60F41E7A1D2800C909EA /* GameBetFooterView.m */; };
+		973C610D1E7A1D2800C909EA /* GameBetHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60F61E7A1D2800C909EA /* GameBetHeaderView.m */; };
+		973C610E1E7A1D2800C909EA /* GameViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60F91E7A1D2800C909EA /* GameViewFlowLayout.m */; };
+		973C610F1E7A1D2800C909EA /* NavTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60FB1E7A1D2800C909EA /* NavTitleButton.m */; };
+		973C61101E7A1D2800C909EA /* PreviewNumbersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60FD1E7A1D2800C909EA /* PreviewNumbersView.m */; };
+		973C61111E7A1D2800C909EA /* RandomBetNubmer.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60FF1E7A1D2800C909EA /* RandomBetNubmer.m */; };
+		973C61121E7A1D2800C909EA /* ReplaceOfString.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C61011E7A1D2800C909EA /* ReplaceOfString.m */; };
+		973C61131E7A1D2800C909EA /* UIColor+WebColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C61031E7A1D2800C909EA /* UIColor+WebColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,6 +362,43 @@
 		2EFFC9421E78DFA60010FD7D /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
 		2EFFC9451E78E5B80010FD7D /* UZLotteryMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZLotteryMediaView.h; sourceTree = "<group>"; };
 		2EFFC9461E78E5B80010FD7D /* UZLotteryMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZLotteryMediaView.m; sourceTree = "<group>"; };
+		973C60A61E7A0EE000C909EA /* DLTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTViewController.h; sourceTree = "<group>"; };
+		973C60A71E7A0EE000C909EA /* DLTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTViewController.m; sourceTree = "<group>"; };
+		973C60E11E7A1D2800C909EA /* BallsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallsCollectionViewCell.h; sourceTree = "<group>"; };
+		973C60E21E7A1D2800C909EA /* BallsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallsCollectionViewCell.m; sourceTree = "<group>"; };
+		973C60E31E7A1D2800C909EA /* BallSizeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallSizeConfig.h; sourceTree = "<group>"; };
+		973C60E41E7A1D2800C909EA /* BallSizeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallSizeConfig.m; sourceTree = "<group>"; };
+		973C60E51E7A1D2800C909EA /* BetFooterButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetFooterButtonView.h; sourceTree = "<group>"; };
+		973C60E61E7A1D2800C909EA /* BetFooterButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetFooterButtonView.m; sourceTree = "<group>"; };
+		973C60E71E7A1D2800C909EA /* BetFooterViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetFooterViewDelegate.h; sourceTree = "<group>"; };
+		973C60E81E7A1D2800C909EA /* CombineArithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombineArithmetic.h; sourceTree = "<group>"; };
+		973C60E91E7A1D2800C909EA /* CombineArithmetic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CombineArithmetic.m; sourceTree = "<group>"; };
+		973C60EA1E7A1D2800C909EA /* CSLCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLCNavigationController.h; sourceTree = "<group>"; };
+		973C60EB1E7A1D2800C909EA /* CSLCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLCNavigationController.m; sourceTree = "<group>"; };
+		973C60EC1E7A1D2800C909EA /* DLTNumbersTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTNumbersTableView.h; sourceTree = "<group>"; };
+		973C60ED1E7A1D2800C909EA /* DLTNumbersTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTNumbersTableView.m; sourceTree = "<group>"; };
+		973C60EE1E7A1D2800C909EA /* DLTNumbersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTNumbersTableViewCell.h; sourceTree = "<group>"; };
+		973C60EF1E7A1D2800C909EA /* DLTNumbersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTNumbersTableViewCell.m; sourceTree = "<group>"; };
+		973C60F01E7A1D2800C909EA /* DLTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTViewController.h; sourceTree = "<group>"; };
+		973C60F11E7A1D2800C909EA /* GameBetContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBetContent.h; sourceTree = "<group>"; };
+		973C60F21E7A1D2800C909EA /* GameBetContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBetContent.m; sourceTree = "<group>"; };
+		973C60F31E7A1D2800C909EA /* GameBetFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBetFooterView.h; sourceTree = "<group>"; };
+		973C60F41E7A1D2800C909EA /* GameBetFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBetFooterView.m; sourceTree = "<group>"; };
+		973C60F51E7A1D2800C909EA /* GameBetHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBetHeaderView.h; sourceTree = "<group>"; };
+		973C60F61E7A1D2800C909EA /* GameBetHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBetHeaderView.m; sourceTree = "<group>"; };
+		973C60F71E7A1D2800C909EA /* GameNumbersTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameNumbersTableViewDelegate.h; sourceTree = "<group>"; };
+		973C60F81E7A1D2800C909EA /* GameViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewFlowLayout.h; sourceTree = "<group>"; };
+		973C60F91E7A1D2800C909EA /* GameViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewFlowLayout.m; sourceTree = "<group>"; };
+		973C60FA1E7A1D2800C909EA /* NavTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavTitleButton.h; sourceTree = "<group>"; };
+		973C60FB1E7A1D2800C909EA /* NavTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavTitleButton.m; sourceTree = "<group>"; };
+		973C60FC1E7A1D2800C909EA /* PreviewNumbersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewNumbersView.h; sourceTree = "<group>"; };
+		973C60FD1E7A1D2800C909EA /* PreviewNumbersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewNumbersView.m; sourceTree = "<group>"; };
+		973C60FE1E7A1D2800C909EA /* RandomBetNubmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomBetNubmer.h; sourceTree = "<group>"; };
+		973C60FF1E7A1D2800C909EA /* RandomBetNubmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomBetNubmer.m; sourceTree = "<group>"; };
+		973C61001E7A1D2800C909EA /* ReplaceOfString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceOfString.h; sourceTree = "<group>"; };
+		973C61011E7A1D2800C909EA /* ReplaceOfString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceOfString.m; sourceTree = "<group>"; };
+		973C61021E7A1D2800C909EA /* UIColor+WebColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WebColor.h"; sourceTree = "<group>"; };
+		973C61031E7A1D2800C909EA /* UIColor+WebColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WebColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -810,12 +864,15 @@
 		2EDB7B0F1E7634A00068F544 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				973C60E01E7A1D2800C909EA /* GameDLTView */,
 				2EFFC9331E78D40C0010FD7D /* UZLotteryXuanhaoVC.h */,
 				2EFFC9341E78D40C0010FD7D /* UZLotteryXuanhaoVC.m */,
 				2EFFC9361E78D4540010FD7D /* UZLotteryXuanhaoCell.h */,
 				2EFFC9371E78D4540010FD7D /* UZLotteryXuanhaoCell.m */,
 				2EFFC9391E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.h */,
 				2EFFC93A1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m */,
+				973C60A61E7A0EE000C909EA /* DLTViewController.h */,
+				973C60A71E7A0EE000C909EA /* DLTViewController.m */,
 				2EDB7B131E7635430068F544 /* UZLotteryNewsVC.h */,
 				2EDB7B141E7635430068F544 /* UZLotteryNewsVC.m */,
 				2EDB7B301E7662B90068F544 /* UZLotteryDetailVC.h */,
@@ -841,6 +898,48 @@
 				2EDB7B1E1E763A1B0068F544 /* UZLotteryRedirectVC.m */,
 			);
 			path = Redirect;
+			sourceTree = "<group>";
+		};
+		973C60E01E7A1D2800C909EA /* GameDLTView */ = {
+			isa = PBXGroup;
+			children = (
+				973C60E11E7A1D2800C909EA /* BallsCollectionViewCell.h */,
+				973C60E21E7A1D2800C909EA /* BallsCollectionViewCell.m */,
+				973C60E31E7A1D2800C909EA /* BallSizeConfig.h */,
+				973C60E41E7A1D2800C909EA /* BallSizeConfig.m */,
+				973C60E51E7A1D2800C909EA /* BetFooterButtonView.h */,
+				973C60E61E7A1D2800C909EA /* BetFooterButtonView.m */,
+				973C60E71E7A1D2800C909EA /* BetFooterViewDelegate.h */,
+				973C60E81E7A1D2800C909EA /* CombineArithmetic.h */,
+				973C60E91E7A1D2800C909EA /* CombineArithmetic.m */,
+				973C60EA1E7A1D2800C909EA /* CSLCNavigationController.h */,
+				973C60EB1E7A1D2800C909EA /* CSLCNavigationController.m */,
+				973C60EC1E7A1D2800C909EA /* DLTNumbersTableView.h */,
+				973C60ED1E7A1D2800C909EA /* DLTNumbersTableView.m */,
+				973C60EE1E7A1D2800C909EA /* DLTNumbersTableViewCell.h */,
+				973C60EF1E7A1D2800C909EA /* DLTNumbersTableViewCell.m */,
+				973C60F01E7A1D2800C909EA /* DLTViewController.h */,
+				973C60F11E7A1D2800C909EA /* GameBetContent.h */,
+				973C60F21E7A1D2800C909EA /* GameBetContent.m */,
+				973C60F31E7A1D2800C909EA /* GameBetFooterView.h */,
+				973C60F41E7A1D2800C909EA /* GameBetFooterView.m */,
+				973C60F51E7A1D2800C909EA /* GameBetHeaderView.h */,
+				973C60F61E7A1D2800C909EA /* GameBetHeaderView.m */,
+				973C60F71E7A1D2800C909EA /* GameNumbersTableViewDelegate.h */,
+				973C60F81E7A1D2800C909EA /* GameViewFlowLayout.h */,
+				973C60F91E7A1D2800C909EA /* GameViewFlowLayout.m */,
+				973C60FA1E7A1D2800C909EA /* NavTitleButton.h */,
+				973C60FB1E7A1D2800C909EA /* NavTitleButton.m */,
+				973C60FC1E7A1D2800C909EA /* PreviewNumbersView.h */,
+				973C60FD1E7A1D2800C909EA /* PreviewNumbersView.m */,
+				973C60FE1E7A1D2800C909EA /* RandomBetNubmer.h */,
+				973C60FF1E7A1D2800C909EA /* RandomBetNubmer.m */,
+				973C61001E7A1D2800C909EA /* ReplaceOfString.h */,
+				973C61011E7A1D2800C909EA /* ReplaceOfString.m */,
+				973C61021E7A1D2800C909EA /* UIColor+WebColor.h */,
+				973C61031E7A1D2800C909EA /* UIColor+WebColor.m */,
+			);
+			path = GameDLTView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -984,10 +1083,13 @@
 				2EDB7ABF1E76344C0068F544 /* AFURLSessionManager.m in Sources */,
 				2EDB7ACA1E76344C0068F544 /* JSONModelClassProperty.m in Sources */,
 				2EDB7AFF1E76344C0068F544 /* UIImageView+HighlightedWebCache.m in Sources */,
+				973C61131E7A1D2800C909EA /* UIColor+WebColor.m in Sources */,
+				973C61071E7A1D2800C909EA /* CombineArithmetic.m in Sources */,
 				2EDB7AC71E76344C0068F544 /* UIRefreshControl+AFNetworking.m in Sources */,
 				2EDB7AE91E76344C0068F544 /* MJRefreshStateHeader.m in Sources */,
 				2EDB7AD11E76344C0068F544 /* MASCompositeConstraint.m in Sources */,
 				2EDB7AD51E76344C0068F544 /* MASViewAttribute.m in Sources */,
+				973C610E1E7A1D2800C909EA /* GameViewFlowLayout.m in Sources */,
 				2EDB7ABC1E76344C0068F544 /* AFSecurityPolicy.m in Sources */,
 				2EDB7AF51E76344C0068F544 /* SDWebImageCompat.m in Sources */,
 				2EDB7AF61E76344C0068F544 /* SDWebImageDecoder.m in Sources */,
@@ -998,12 +1100,15 @@
 				2EDB7AFD1E76344C0068F544 /* UIImage+MultiFormat.m in Sources */,
 				2EDB7ADF1E76344C0068F544 /* MJRefreshFooter.m in Sources */,
 				2EDB7AC61E76344C0068F544 /* UIProgressView+AFNetworking.m in Sources */,
+				973C60A81E7A0EE000C909EA /* DLTViewController.m in Sources */,
 				2EDB7AF11E76344C0068F544 /* NSData+ImageContentType.m in Sources */,
 				2EFFC93E1E78DDCA0010FD7D /* UZLotteryAppLaunchVC.m in Sources */,
 				2EDB7B071E76344C0068F544 /* NSNumber+YYAdd.m in Sources */,
 				2EDB7AC21E76344C0068F544 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				973C61051E7A1D2800C909EA /* BallSizeConfig.m in Sources */,
 				2EFFC9441E78DFA60010FD7D /* NSObject+HUD.m in Sources */,
 				2EDB7B1F1E763A1B0068F544 /* UZLotteryRedirectVC.m in Sources */,
+				973C61091E7A1D2800C909EA /* DLTNumbersTableView.m in Sources */,
 				2EDB7AE41E76344C0068F544 /* MJRefreshBackGifFooter.m in Sources */,
 				2EDB7AF81E76344C0068F544 /* SDWebImageDownloaderOperation.m in Sources */,
 				2EDB7AEC1E76344C0068F544 /* NSBundle+MJRefresh.m in Sources */,
@@ -1020,9 +1125,13 @@
 				2EDB7ADD1E76344C0068F544 /* MJRefreshBackFooter.m in Sources */,
 				2EDB7AE01E76344C0068F544 /* MJRefreshHeader.m in Sources */,
 				2EDB7AFB1E76344C0068F544 /* UIButton+WebCache.m in Sources */,
+				973C610C1E7A1D2800C909EA /* GameBetFooterView.m in Sources */,
 				2EDB7B181E76362A0068F544 /* UZSessionManager.m in Sources */,
 				2EDB7AC51E76344C0068F544 /* UIImageView+AFNetworking.m in Sources */,
+				973C610A1E7A1D2800C909EA /* DLTNumbersTableViewCell.m in Sources */,
+				973C610D1E7A1D2800C909EA /* GameBetHeaderView.m in Sources */,
 				2EFFC9351E78D40C0010FD7D /* UZLotteryXuanhaoVC.m in Sources */,
+				973C61121E7A1D2800C909EA /* ReplaceOfString.m in Sources */,
 				2EDB7AD41E76344C0068F544 /* MASLayoutConstraint.m in Sources */,
 				2EDB7AF01E76344C0068F544 /* MKAnnotationView+WebCache.m in Sources */,
 				2EFFC93B1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m in Sources */,
@@ -1033,6 +1142,7 @@
 				2EDB7AC31E76344C0068F544 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				2EDB7AF21E76344C0068F544 /* NSImage+WebCache.m in Sources */,
 				2EDB7AC81E76344C0068F544 /* UIWebView+AFNetworking.m in Sources */,
+				973C61101E7A1D2800C909EA /* PreviewNumbersView.m in Sources */,
 				2EDB7ACE1E76344C0068F544 /* JSONModel+networking.m in Sources */,
 				2EDB7ABB1E76344C0068F544 /* AFNetworkReachabilityManager.m in Sources */,
 				2EDB7B0B1E76344C0068F544 /* UIDevice+YYAdd.m in Sources */,
@@ -1042,6 +1152,7 @@
 				2EDB7AEE1E76344C0068F544 /* UIScrollView+MJRefresh.m in Sources */,
 				2EDB7AC01E76344C0068F544 /* AFAutoPurgingImageCache.m in Sources */,
 				2EDB7AC11E76344C0068F544 /* AFImageDownloader.m in Sources */,
+				973C61081E7A1D2800C909EA /* CSLCNavigationController.m in Sources */,
 				2EDB7AD91E76344C0068F544 /* View+MASAdditions.m in Sources */,
 				2EDB7AD01E76344C0068F544 /* JSONValueTransformer.m in Sources */,
 				2EDB7AD21E76344C0068F544 /* MASConstraint.m in Sources */,
@@ -1059,14 +1170,19 @@
 				2EDB7AD61E76344C0068F544 /* MASViewConstraint.m in Sources */,
 				2EDB7AED1E76344C0068F544 /* UIScrollView+MJExtension.m in Sources */,
 				2EFFC9381E78D4540010FD7D /* UZLotteryXuanhaoCell.m in Sources */,
+				973C610F1E7A1D2800C909EA /* NavTitleButton.m in Sources */,
 				2EDB7AE21E76344C0068F544 /* MJRefreshAutoNormalFooter.m in Sources */,
 				2EDB7AC91E76344C0068F544 /* JSONModel.m in Sources */,
+				973C61111E7A1D2800C909EA /* RandomBetNubmer.m in Sources */,
 				2EDB7AF31E76344C0068F544 /* SDImageCache.m in Sources */,
+				973C61061E7A1D2800C909EA /* BetFooterButtonView.m in Sources */,
 				2EDB7AF91E76344C0068F544 /* SDWebImageManager.m in Sources */,
 				2EDB7ADB1E76344C0068F544 /* MBProgressHUD.m in Sources */,
 				2EDB7AD71E76344C0068F544 /* NSArray+MASAdditions.m in Sources */,
 				2EDB7AF41E76344C0068F544 /* SDImageCacheConfig.m in Sources */,
 				2EDB7B081E76344C0068F544 /* NSString+YYAdd.m in Sources */,
+				973C610B1E7A1D2800C909EA /* GameBetContent.m in Sources */,
+				973C61041E7A1D2800C909EA /* BallsCollectionViewCell.m in Sources */,
 				2EDB7AE31E76344C0068F544 /* MJRefreshAutoStateFooter.m in Sources */,
 				2EDB7B051E76344C0068F544 /* NSDate+YYAdd.m in Sources */,
 				2EDB7AC41E76344C0068F544 /* UIButton+AFNetworking.m in Sources */,

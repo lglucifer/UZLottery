@@ -26,13 +26,13 @@
         self.icon = icon;
         
         [icon mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.contentView).mas_offset(10);
+            make.left.mas_equalTo(self.contentView).mas_offset(20);
             make.centerY.equalTo(self.contentView);
-            make.width.height.mas_equalTo(80);
+            make.width.height.mas_equalTo(60);
         }];
         
         UILabel *titleLb = [[UILabel alloc] init];
-        titleLb.font = [UIFont boldSystemFontOfSize:25];
+        titleLb.font = [UIFont boldSystemFontOfSize:20];
         titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
         [self.contentView addSubview:titleLb];
         self.titleLb = titleLb;
@@ -50,9 +50,11 @@
     if (lotteryType == UZLotteryType_DaLeTou) {
         self.icon.image = [UIImage imageNamed:@"home_icon_10"];
         self.titleLb.text = @"超级大乐透";
+        self.titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
     } else {
         self.icon.image = [UIImage imageNamed:@"home_icon_20"];
-        self.titleLb.text = @"11选5";
+        self.titleLb.text = @"更多游戏选号敬请期待";
+        self.titleLb.textColor = [UIColor lightGrayColor];
     }
 }
 

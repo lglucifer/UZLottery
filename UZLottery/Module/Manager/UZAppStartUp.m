@@ -10,7 +10,7 @@
 #import "UZLotteryNewsVC.h"
 #import "UZLotteryXuanhaoVC.h"
 #import "UZLotteryAppLaunchVC.h"
-
+#import "CSLCNavigationController.h"
 @interface UZAppStartUp()
 
 @property (nonatomic, strong, readwrite) UITabBarController *rootViewController;
@@ -43,7 +43,7 @@
                                                    selectedImage:highlightImage];
         UZLotteryXuanhaoVC *firstVC = [[UZLotteryXuanhaoVC alloc] init];
         firstVC.tabBarItem = item;
-        UINavigationController *firstNavi = [[UINavigationController alloc] initWithRootViewController:firstVC];
+        CSLCNavigationController *firstNavi = [[CSLCNavigationController alloc] initWithRootViewController:firstVC];
         
         normalImage = [[UIImage imageNamed:@"xinwen_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         highlightImage = [[UIImage imageNamed:@"xinwen_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -53,7 +53,7 @@
         UZLotteryNewsVC *secondVC = [[UZLotteryNewsVC alloc] init];
         secondVC.tabBarItem = item;
         secondVC.pageType = UZLotteryNewsType_Page1;
-        UINavigationController *secondNavi = [[UINavigationController alloc] initWithRootViewController:secondVC];
+        CSLCNavigationController *secondNavi = [[CSLCNavigationController alloc] initWithRootViewController:secondVC];
         
         normalImage = [[UIImage imageNamed:@"hangye_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         highlightImage = [[UIImage imageNamed:@"hangye_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -63,7 +63,7 @@
         UZLotteryNewsVC *thirdVC = [[UZLotteryNewsVC alloc] init];
         thirdVC.tabBarItem = item;
         secondVC.pageType = UZLotteryNewsType_Page2;
-        UINavigationController *thirdNavi = [[UINavigationController alloc] initWithRootViewController:thirdVC];
+        CSLCNavigationController *thirdNavi = [[CSLCNavigationController alloc] initWithRootViewController:thirdVC];
         
         UITabBarController *tabBarController = [[UITabBarController alloc] init];
         tabBarController.viewControllers = @[firstNavi, secondNavi, thirdNavi];

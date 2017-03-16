@@ -9,7 +9,7 @@
 #import "UZLotteryXuanhaoVC.h"
 #import "UZLotteryXuanhaoDetailVC.h"
 #import "UZLotteryXuanhaoCell.h"
-
+#import "DLTViewController.h"
 @interface UZLotteryXuanhaoVC ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
@@ -49,9 +49,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UZLotteryXuanhaoDetailVC *detailVC = [[UZLotteryXuanhaoDetailVC alloc] init];
-    detailVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:detailVC animated:YES];
+//    UZLotteryXuanhaoDetailVC *detailVC = [[UZLotteryXuanhaoDetailVC alloc] init];
+//    detailVC.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:detailVC animated:YES];
+    if (indexPath.row==0) {
+        DLTViewController * dv = [[DLTViewController alloc] init];
+        dv.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:dv animated:YES];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                        message:@"更多游戏选号敬请期待..."
+                                                       delegate:self
+                                              cancelButtonTitle:@"好"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {

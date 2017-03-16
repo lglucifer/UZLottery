@@ -7,6 +7,7 @@
 //
 
 #import "UZLotteryMediaView.h"
+#import "UIImage+Scale.h"
 
 @interface UZLotteryMediaView()
 
@@ -17,6 +18,11 @@
 @end
 
 @implementation UZLotteryMediaView
+
+- (void)dealloc {
+    _kCloseMediaBlock = nil;
+    _media = nil;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -55,8 +61,19 @@
         return;
     }
     _media = media;
+    __weak __typeof(self) weakSelf = self;
     [self.imageV sd_setImageWithURL:[NSURL URLWithString:media.img]
-                   placeholderImage:nil];
+                   placeholderImage:nil
+                          completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+                              if ([imageURL.absoluteString isEqualToString:media.img]) {
+                                  UIImage *newImage = [UIImage scaleImage:image size:weakSelf.imageScaleSize];
+                                  weakSelf.imageV.image = newImage;
+                              }
+                          }];
+    if (media.can_close &&
+        self.enableShowCloseBtn) {
+        self.closeBtn.hidden = NO;
+    }
 }
 
 - (void)inner_TapMedia:(UITapGestureRecognizer *)tapGesture {
@@ -76,7 +93,9 @@
 }
 
 - (void)inner_Close:(UIButton *)sender {
-    
+    if (self.kCloseMediaBlock) {
+        self.kCloseMediaBlock(self);
+    }
 }
 
 @end

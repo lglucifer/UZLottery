@@ -13,4 +13,10 @@
 
 @property (nonatomic, strong) UZLotteryMedia *media;
 
+@property (nonatomic, copy) void(^kCloseMediaBlock)(UZLotteryMediaView *mediaView);
+
+@property (nonatomic, assign) BOOL enableShowCloseBtn;
+
+@property (nonatomic, assign) CGSize imageScaleSize;
+
 @end

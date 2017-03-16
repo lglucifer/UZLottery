@@ -37,6 +37,8 @@
 
 @interface UZLotteryAppLaunch : UZLotteryModel
 
+@property (nonatomic, assign) BOOL app_status;
+@property (nonatomic, copy) NSString *app_url;
 @property (nonatomic, strong) UZLotteryMedia *logo;
 @property (nonatomic, strong) UZLotteryMedia *launch;
 @property (nonatomic, strong) UZLotteryMedia *screen;

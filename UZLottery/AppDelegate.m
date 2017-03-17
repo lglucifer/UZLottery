@@ -17,9 +17,9 @@
 #import <UserNotifications/UserNotifications.h>
 #endif
 
-#define kGtAppId           @"iMahVVxurw6BNr7XSn9EF2"
-#define kGtAppKey          @"yIPfqwq6OMAPp6dkqgLpG5"
-#define kGtAppSecret       @"G0aBqAD6t79JfzTB6Z5lo5"
+#define kGtAppId           @"yJpCtq21At6sFuqUwtqoT7"
+#define kGtAppKey          @"7mEfERuFwO7Z4eLpeKxiS2"
+#define kGtAppSecret       @"4nSvnEdlFz7kAohYbnTor2"
 
 @interface AppDelegate () <UIApplicationDelegate, GeTuiSdkDelegate, UNUserNotificationCenterDelegate>
 

@@ -58,41 +58,41 @@ NSInteger kUZAppRequestCancelCode   = -999;
                            userInfo:@{NSLocalizedDescriptionKey: @"返回数据出错"}];
 }
 
-- (NSURLSessionDataTask *)uz_POST:(NSString *)URLString
-                       parameters:(id)parameters
-                          success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                          failure:(void (^)(NSURLSessionDataTask *task, NSError *error, BOOL needsShowHUD))failure {
+- (NSURLSessionDataTask *)uz_Get:(NSString *)URLString
+                      parameters:(id)parameters
+                         success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                         failure:(void (^)(NSURLSessionDataTask *task, NSError *error, BOOL needsShowHUD))failure {
     __weak __typeof(self) weakSelf = self;
     return
-    [self POST:URLString
-    parameters:parameters
-      progress:nil
-       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-           BOOL validResponseObject = [weakSelf inner_CheckResponseObjectValid:responseObject];
-           if (validResponseObject) {
-               id validResponseValue = responseObject[@"data"];
-               success(task, validResponseValue);
-           } else {
-               NSError *invalidResponseObjectError = [weakSelf inner_CreateResponseObjectError:responseObject];
-               if (invalidResponseObjectError.code != kUZAppRequestCancelCode) {
-                   failure(task, invalidResponseObjectError, YES);
-               } else {
-                   //                   failure(task, invalidResponseObjectError, NO);
-               }
-           }
-       } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-           if (error.code != kUZAppRequestCancelCode) {
-               failure(task, error, YES);
-           } else {
-               //               failure(task, error, NO);
-           }
-       }];
+    [self GET:URLString
+   parameters:parameters
+     progress:nil
+      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+          BOOL validResponseObject = [weakSelf inner_CheckResponseObjectValid:responseObject];
+          if (validResponseObject) {
+              id validResponseValue = responseObject[@"data"];
+              success(task, validResponseValue);
+          } else {
+              NSError *invalidResponseObjectError = [weakSelf inner_CreateResponseObjectError:responseObject];
+              if (invalidResponseObjectError.code != kUZAppRequestCancelCode) {
+                  failure(task, invalidResponseObjectError, YES);
+              } else {
+                  //                   failure(task, invalidResponseObjectError, NO);
+              }
+          }
+      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+          if (error.code != kUZAppRequestCancelCode) {
+              failure(task, error, YES);
+          } else {
+              //               failure(task, error, NO);
+          }
+      }];
 }
 
 - (NSURLSessionDataTask *)requestLotteryInfoSuccess:(void(^)(UZLotteryAppLaunch *appLaunch, NSURLSessionDataTask *dataTask))success
                                             failure:(void(^)(NSError *error, NSURLSessionDataTask *dataTask))failure {
     return
-    [self uz_POST:@"http://ningweb.com/lottery/api/index.php/nightkiss/getAppDetail/?id=1445"
+    [self uz_Get:@"http://app.asostore.cc/api/index.php?c=nightkiss&a=getAppDetail&id=1445"
        parameters:nil
           success:^(NSURLSessionDataTask *task, id responseObject) {
               UZLotteryAppLaunch *appLaunch = [[UZLotteryAppLaunch alloc] initWithDictionary:responseObject
@@ -108,12 +108,12 @@ NSInteger kUZAppRequestCancelCode   = -999;
                                                  failure:(void(^)(NSError *error, NSURLSessionDataTask *dataTask))failure {
     NSString *URLPath = @"";
     if (pageType == 0) {
-        URLPath = @"http://ningweb.com/lottery/api/index.php/nightkiss/getAllNews?page=0";
+        URLPath = @"http://app.asostore.cc/api/index.php?c=nightkiss&a=getAllNews&page=0";
     } else if (pageType == 1) {
-        URLPath = @"http://ningweb.com/lottery/api/index.php/nightkiss/getAllNews?page=1";
+        URLPath = @"http://app.asostore.cc/api/index.php?c=nightkiss&a=getAllNews&page=1";
     }
     return
-    [self uz_POST:URLPath
+    [self uz_Get:URLPath
        parameters:nil
           success:^(NSURLSessionDataTask *task, id responseObject) {
               NSArray *items = [UZLotteryNews arrayOfModelsFromDictionaries:responseObject

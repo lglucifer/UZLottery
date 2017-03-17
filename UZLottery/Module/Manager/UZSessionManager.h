@@ -18,4 +18,7 @@
                                                  Success:(void(^)(NSArray *news, NSURLSessionDataTask *dataTask))success
                                                  failure:(void(^)(NSError *error, NSURLSessionDataTask *dataTask))failure;
 
+- (NSURLSessionDataTask *)requestShishicaiKaijiangWithName:(NSString *)name
+                                                   Success:(void(^)(NSArray *news, NSURLSessionDataTask *dataTask))success
+                                                   failure:(void(^)(NSError *error, NSURLSessionDataTask *dataTask))failure;
 @end

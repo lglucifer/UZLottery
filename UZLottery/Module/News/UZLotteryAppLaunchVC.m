@@ -48,12 +48,22 @@
         [weakSelf.view removeFromSuperview];
     }];
     //网页
+    UIView * top = [[UIView alloc] init];
+    top.backgroundColor = [UIColor colorWithHexString:@"ec2828"];
+    [self.view addSubview:top];
+    [top mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.mas_equalTo(self.view);
+        make.height.mas_equalTo(20);
+    }];
+    
     UIWebView *webView = [[UIWebView alloc] init];
     webView.hidden = YES;
     [self.view addSubview:webView];
     self.webView = webView;
     [webView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view).insets(UIEdgeInsetsZero);
+        make.top.mas_equalTo(20);
+        
+        make.left.right.bottom.mas_equalTo(self.view).insets(UIEdgeInsetsZero);
     }];
     //遮罩
     UIView *maskView = [[UIView alloc] init];

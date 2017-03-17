@@ -27,12 +27,13 @@ NSInteger kUZAppRequestCancelCode   = -999;
     BOOL valid = NO;
     if ([responseObject isKindOfClass:[NSDictionary class]]) {
         NSString *code = [NSString stringWithFormat:@"%@", responseObject[@"error"]];
-        if ([code isEqualToString:@"0"]) {
+        if ([code isEqualToString:@"0"] || [responseObject objectForKey:@"data"]) {
             valid = YES;
         }
     }
     return valid;
 }
+
 
 - (NSError *)inner_CreateResponseObjectError:(id)responseObject {
     if ([responseObject isKindOfClass:[NSDictionary class]]) {
@@ -123,5 +124,22 @@ NSInteger kUZAppRequestCancelCode   = -999;
               failure(error, task);
           }];
 }
+
+- (NSURLSessionDataTask *)requestShishicaiKaijiangWithName:(NSString *)name
+                                                 Success:(void(^)(NSArray *news, NSURLSessionDataTask *dataTask))success
+                                                 failure:(void(^)(NSError *error, NSURLSessionDataTask *dataTask))failure {
+    NSString *URLPath = [NSString stringWithFormat:@"http://f.apiplus.cn/%@.json",name];
+    return
+    [self uz_Get:URLPath
+      parameters:nil
+         success:^(NSURLSessionDataTask *task, id responseObject) {
+             NSArray *items = [UZLotteryKaijiang arrayOfModelsFromDictionaries:responseObject
+                                                                     error:nil];
+             success(items, task);
+         } failure:^(NSURLSessionDataTask *task, NSError *error, BOOL needsShowHUD) {
+             failure(error, task);
+         }];
+}
+
 
 @end

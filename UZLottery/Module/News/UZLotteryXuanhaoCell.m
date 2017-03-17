@@ -10,9 +10,6 @@
 
 @interface UZLotteryXuanhaoCell()
 
-@property (nonatomic, weak) UILabel *titleLb;
-
-@property (nonatomic, weak) UIImageView *icon;
 
 @end
 

@@ -10,6 +10,7 @@
 #import "UZLotteryXuanhaoDetailVC.h"
 #import "UZLotteryXuanhaoCell.h"
 #import "DLTViewController.h"
+#import "KaijiangViewController.h"
 @interface UZLotteryXuanhaoVC ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
@@ -38,9 +39,53 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UZLotteryXuanhaoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UZLotteryXuanhaoCell class])];
-    cell.lotteryType = indexPath.row == 0 ? UZLotteryType_DaLeTou : UZLotteryType_11xuan5;
-    return cell;
+    if (indexPath.section==0) {
+        UZLotteryXuanhaoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UZLotteryXuanhaoCell class])];
+        
+        if (indexPath.row==0) {
+            cell.icon.image = [UIImage imageNamed:@"shishicaiicon"];
+            cell.titleLb.text = @"重庆时时彩";
+            cell.titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
+        }
+        else
+        {
+            cell.icon.image = [UIImage imageNamed:@"home_icon_20"];
+            cell.titleLb.text = @"更多开奖信息敬请期待";
+            cell.titleLb.textColor = [UIColor lightGrayColor];
+        }
+        return cell;
+    }
+    else{
+        UZLotteryXuanhaoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UZLotteryXuanhaoCell class])];
+        if (indexPath.row==0) {
+            cell.icon.image = [UIImage imageNamed:@"home_icon_10"];
+            cell.titleLb.text = @"超级大乐透";
+            cell.titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
+        }
+        else
+        {
+            cell.icon.image = [UIImage imageNamed:@"home_icon_20"];
+            cell.titleLb.text = @"更多游戏选号敬请期待";
+            cell.titleLb.textColor = [UIColor lightGrayColor];
+        }
+
+        return cell;
+    }
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section==0) {
+        return @"开奖信息";
+    }
+    else{
+        return @"选号器";
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -52,20 +97,39 @@
 //    UZLotteryXuanhaoDetailVC *detailVC = [[UZLotteryXuanhaoDetailVC alloc] init];
 //    detailVC.hidesBottomBarWhenPushed = YES;
 //    [self.navigationController pushViewController:detailVC animated:YES];
-    if (indexPath.row==0) {
-        DLTViewController * dv = [[DLTViewController alloc] init];
-        dv.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:dv animated:YES];
+    if (indexPath.section==0) {
+        if (indexPath.row==0) {
+            KaijiangViewController * dv = [[KaijiangViewController alloc] init];
+            dv.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:dv animated:YES];
+        }
+        else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                            message:@"更多开奖资讯敬请期待..."
+                                                           delegate:self
+                                                  cancelButtonTitle:@"好"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
-                                                        message:@"更多游戏选号敬请期待..."
-                                                       delegate:self
-                                              cancelButtonTitle:@"好"
-                                              otherButtonTitles:nil];
-        [alert show];
+        if (indexPath.row==0) {
+            DLTViewController * dv = [[DLTViewController alloc] init];
+            dv.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:dv animated:YES];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                            message:@"更多游戏选号敬请期待..."
+                                                           delegate:self
+                                                  cancelButtonTitle:@"好"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
     }
+   
 
 }
 

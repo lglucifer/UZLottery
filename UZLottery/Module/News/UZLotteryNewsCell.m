@@ -10,9 +10,6 @@
 
 @interface UZLotteryNewsCell()
 
-@property (nonatomic, weak) UILabel *titleLb;
-
-@property (nonatomic, weak) UILabel *dateLb;
 
 @end
 

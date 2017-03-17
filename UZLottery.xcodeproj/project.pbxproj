@@ -128,6 +128,7 @@
 		973C61111E7A1D2800C909EA /* RandomBetNubmer.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C60FF1E7A1D2800C909EA /* RandomBetNubmer.m */; };
 		973C61121E7A1D2800C909EA /* ReplaceOfString.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C61011E7A1D2800C909EA /* ReplaceOfString.m */; };
 		973C61131E7A1D2800C909EA /* UIColor+WebColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C61031E7A1D2800C909EA /* UIColor+WebColor.m */; };
+		973C61171E7B926E00C909EA /* KaijiangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C61161E7B926E00C909EA /* KaijiangViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -405,6 +406,8 @@
 		973C61011E7A1D2800C909EA /* ReplaceOfString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceOfString.m; sourceTree = "<group>"; };
 		973C61021E7A1D2800C909EA /* UIColor+WebColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WebColor.h"; sourceTree = "<group>"; };
 		973C61031E7A1D2800C909EA /* UIColor+WebColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WebColor.m"; sourceTree = "<group>"; };
+		973C61151E7B926E00C909EA /* KaijiangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaijiangViewController.h; sourceTree = "<group>"; };
+		973C61161E7B926E00C909EA /* KaijiangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaijiangViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -883,6 +886,8 @@
 				2EFFC93A1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m */,
 				973C60A61E7A0EE000C909EA /* DLTViewController.h */,
 				973C60A71E7A0EE000C909EA /* DLTViewController.m */,
+				973C61151E7B926E00C909EA /* KaijiangViewController.h */,
+				973C61161E7B926E00C909EA /* KaijiangViewController.m */,
 				2EDB7B131E7635430068F544 /* UZLotteryNewsVC.h */,
 				2EDB7B141E7635430068F544 /* UZLotteryNewsVC.m */,
 				2EDB7B301E7662B90068F544 /* UZLotteryDetailVC.h */,
@@ -1192,6 +1197,7 @@
 				2EDB7ADB1E76344C0068F544 /* MBProgressHUD.m in Sources */,
 				2EDB7AD71E76344C0068F544 /* NSArray+MASAdditions.m in Sources */,
 				2EDB7AF41E76344C0068F544 /* SDImageCacheConfig.m in Sources */,
+				973C61171E7B926E00C909EA /* KaijiangViewController.m in Sources */,
 				2EDB7B081E76344C0068F544 /* NSString+YYAdd.m in Sources */,
 				973C610B1E7A1D2800C909EA /* GameBetContent.m in Sources */,
 				973C61041E7A1D2800C909EA /* BallsCollectionViewCell.m in Sources */,

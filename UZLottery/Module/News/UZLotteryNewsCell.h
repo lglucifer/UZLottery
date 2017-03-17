@@ -13,4 +13,7 @@
 
 @property (nonatomic, strong) UZLotteryNews *news;
 
+@property (nonatomic, weak) UILabel *titleLb;
+
+@property (nonatomic, weak) UILabel *dateLb;
 @end

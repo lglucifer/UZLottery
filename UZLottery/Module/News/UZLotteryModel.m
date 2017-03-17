@@ -23,7 +23,9 @@
 }
 
 @end
+@implementation UZLotteryKaijiang
 
+@end
 @implementation UZLotteryMedia
 
 @end

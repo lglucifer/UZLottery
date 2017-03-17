@@ -38,7 +38,7 @@
 
         UIImage *normalImage = [[UIImage imageNamed:@"xuanhao_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UIImage *highlightImage = [[UIImage imageNamed:@"xuanhao_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"选号"
+        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"开奖信息"
                                                            image:normalImage
                                                    selectedImage:highlightImage];
         UZLotteryXuanhaoVC *firstVC = [[UZLotteryXuanhaoVC alloc] init];
@@ -47,7 +47,7 @@
         
         normalImage = [[UIImage imageNamed:@"xinwen_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         highlightImage = [[UIImage imageNamed:@"xinwen_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        item = [[UITabBarItem alloc] initWithTitle:@"咨询"
+        item = [[UITabBarItem alloc] initWithTitle:@"资讯"
                                              image:normalImage
                                      selectedImage:highlightImage];
         UZLotteryNewsVC *secondVC = [[UZLotteryNewsVC alloc] init];

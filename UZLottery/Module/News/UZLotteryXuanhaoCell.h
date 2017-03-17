@@ -15,6 +15,10 @@ typedef NS_ENUM(NSUInteger, UZLotteryType) {
 
 @interface UZLotteryXuanhaoCell : UITableViewCell
 
+@property (nonatomic, weak) UILabel *titleLb;
+
+@property (nonatomic, weak) UIImageView *icon;
+
 @property (nonatomic, assign) UZLotteryType lotteryType;
 
 @end

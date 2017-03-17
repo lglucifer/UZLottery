@@ -21,6 +21,15 @@
 
 @end
 
+@interface UZLotteryKaijiang : UZLotteryModel
+
+@property (nonatomic, copy) NSString *expect;
+@property (nonatomic, copy) NSString *opencode;
+@property (nonatomic, copy) NSString *opentime;
+//@property (nonatomic, strong) NSDate *createdTime;
+
+@end
+
 @protocol UZLotteryMedia <NSObject>
 
 @end

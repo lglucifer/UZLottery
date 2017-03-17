@@ -133,6 +133,16 @@
 		973C611B1E7BA44B00C909EA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C611A1E7BA44B00C909EA /* CoreTelephony.framework */; };
 		973C611D1E7BA45F00C909EA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C611C1E7BA45F00C909EA /* libsqlite3.tbd */; };
 		973C611F1E7BA46800C909EA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C611E1E7BA46800C909EA /* libz.tbd */; };
+		973C61251E7BFD0100C909EA /* libGeTuiSdk-1.6.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61231E7BFD0100C909EA /* libGeTuiSdk-1.6.2.0.a */; };
+		973C61261E7BFD0100C909EA /* libGtExtensionSdk-1.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61241E7BFD0100C909EA /* libGtExtensionSdk-1.1.0.a */; };
+		973C61281E7BFD1E00C909EA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61271E7BFD1E00C909EA /* UserNotifications.framework */; };
+		973C612A1E7BFD3F00C909EA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61291E7BFD3F00C909EA /* libc++.tbd */; };
+		973C612C1E7BFD4900C909EA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C612B1E7BFD4900C909EA /* Security.framework */; };
+		973C612E1E7BFD5200C909EA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C612D1E7BFD5200C909EA /* MobileCoreServices.framework */; };
+		973C61301E7BFD5800C909EA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C612F1E7BFD5800C909EA /* SystemConfiguration.framework */; };
+		973C61321E7BFD6500C909EA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61311E7BFD6500C909EA /* AVFoundation.framework */; };
+		973C61341E7BFD6C00C909EA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61331E7BFD6C00C909EA /* CoreLocation.framework */; };
+		973C61361E7BFD7200C909EA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61351E7BFD7200C909EA /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -416,6 +426,19 @@
 		973C611A1E7BA44B00C909EA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		973C611C1E7BA45F00C909EA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		973C611E1E7BA46800C909EA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		973C61211E7BFD0100C909EA /* GeTuiExtSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiExtSdk.h; sourceTree = "<group>"; };
+		973C61221E7BFD0100C909EA /* GeTuiSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiSdk.h; sourceTree = "<group>"; };
+		973C61231E7BFD0100C909EA /* libGeTuiSdk-1.6.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGeTuiSdk-1.6.2.0.a"; sourceTree = "<group>"; };
+		973C61241E7BFD0100C909EA /* libGtExtensionSdk-1.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGtExtensionSdk-1.1.0.a"; sourceTree = "<group>"; };
+		973C61271E7BFD1E00C909EA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		973C61291E7BFD3F00C909EA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		973C612B1E7BFD4900C909EA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		973C612D1E7BFD5200C909EA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		973C612F1E7BFD5800C909EA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		973C61311E7BFD6500C909EA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		973C61331E7BFD6C00C909EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		973C61351E7BFD7200C909EA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		973C61371E7C0DA700C909EA /* UZLottery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UZLottery.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,9 +446,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				973C611F1E7BA46800C909EA /* libz.tbd in Frameworks */,
-				973C611D1E7BA45F00C909EA /* libsqlite3.tbd in Frameworks */,
+				973C61361E7BFD7200C909EA /* AdSupport.framework in Frameworks */,
+				973C61341E7BFD6C00C909EA /* CoreLocation.framework in Frameworks */,
+				973C61321E7BFD6500C909EA /* AVFoundation.framework in Frameworks */,
 				973C611B1E7BA44B00C909EA /* CoreTelephony.framework in Frameworks */,
+				973C61301E7BFD5800C909EA /* SystemConfiguration.framework in Frameworks */,
+				973C612E1E7BFD5200C909EA /* MobileCoreServices.framework in Frameworks */,
+				973C612C1E7BFD4900C909EA /* Security.framework in Frameworks */,
+				973C612A1E7BFD3F00C909EA /* libc++.tbd in Frameworks */,
+				973C61281E7BFD1E00C909EA /* UserNotifications.framework in Frameworks */,
+				973C611F1E7BA46800C909EA /* libz.tbd in Frameworks */,
+				973C61261E7BFD0100C909EA /* libGtExtensionSdk-1.1.0.a in Frameworks */,
+				973C611D1E7BA45F00C909EA /* libsqlite3.tbd in Frameworks */,
+				973C61251E7BFD0100C909EA /* libGeTuiSdk-1.6.2.0.a in Frameworks */,
 				973C61191E7BA3F300C909EA /* UMMobClick.framework in Frameworks */,
 				2EDB79F31E7634100068F544 /* libz.1.2.5.tbd in Frameworks */,
 			);
@@ -472,6 +505,7 @@
 		2EDB79BD1E7632020068F544 /* UZLottery */ = {
 			isa = PBXGroup;
 			children = (
+				973C61371E7C0DA700C909EA /* UZLottery.entitlements */,
 				2EDB79F41E76344C0068F544 /* Module */,
 				2EDB79F51E76344C0068F544 /* ThirdSource */,
 				2EDB79C11E7632020068F544 /* AppDelegate.h */,
@@ -514,6 +548,14 @@
 		2EDB79F11E76340F0068F544 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				973C61351E7BFD7200C909EA /* AdSupport.framework */,
+				973C61331E7BFD6C00C909EA /* CoreLocation.framework */,
+				973C61311E7BFD6500C909EA /* AVFoundation.framework */,
+				973C612F1E7BFD5800C909EA /* SystemConfiguration.framework */,
+				973C612D1E7BFD5200C909EA /* MobileCoreServices.framework */,
+				973C612B1E7BFD4900C909EA /* Security.framework */,
+				973C61291E7BFD3F00C909EA /* libc++.tbd */,
+				973C61271E7BFD1E00C909EA /* UserNotifications.framework */,
 				973C611E1E7BA46800C909EA /* libz.tbd */,
 				973C611C1E7BA45F00C909EA /* libsqlite3.tbd */,
 				973C611A1E7BA44B00C909EA /* CoreTelephony.framework */,
@@ -535,6 +577,7 @@
 		2EDB79F51E76344C0068F544 /* ThirdSource */ = {
 			isa = PBXGroup;
 			children = (
+				973C61201E7BFD0100C909EA /* GtSdkLib */,
 				973C61181E7BA3F300C909EA /* UMMobClick.framework */,
 				2EDB79F61E76344C0068F544 /* AFNetworking */,
 				2EDB7A1A1E76344C0068F544 /* JSONModel */,
@@ -973,6 +1016,17 @@
 			path = GameDLTView;
 			sourceTree = "<group>";
 		};
+		973C61201E7BFD0100C909EA /* GtSdkLib */ = {
+			isa = PBXGroup;
+			children = (
+				973C61211E7BFD0100C909EA /* GeTuiExtSdk.h */,
+				973C61221E7BFD0100C909EA /* GeTuiSdk.h */,
+				973C61231E7BFD0100C909EA /* libGeTuiSdk-1.6.2.0.a */,
+				973C61241E7BFD0100C909EA /* libGtExtensionSdk-1.1.0.a */,
+			);
+			path = GtSdkLib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1042,6 +1096,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4225KQ7WC5;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2EDB79D31E7632020068F544 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1311,7 +1373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1352,7 +1414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1363,6 +1425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UZLottery/UZLottery.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Xinle Tao (CUVR22NJYL)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xinle Tao (CUVR22NJYL)";
 				DEVELOPMENT_TEAM = 4225KQ7WC5;
@@ -1373,6 +1436,10 @@
 				GCC_PREFIX_HEADER = UZLottery/UZLottery.pch;
 				INFOPLIST_FILE = UZLottery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UZLottery/ThirdSource/GtSdkLib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uzero.caipiaowht;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b1f1ada6-7372-49d4-8fbb-e8142e4eb598";
@@ -1384,6 +1451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UZLottery/UZLottery.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Xinle Tao (4225KQ7WC5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xinle Tao (4225KQ7WC5)";
 				DEVELOPMENT_TEAM = 4225KQ7WC5;
@@ -1394,6 +1462,10 @@
 				GCC_PREFIX_HEADER = UZLottery/UZLottery.pch;
 				INFOPLIST_FILE = UZLottery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UZLottery/ThirdSource/GtSdkLib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uzero.caipiaowht;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "92cdca63-e3d9-4bf2-bb43-20805fca12fb";

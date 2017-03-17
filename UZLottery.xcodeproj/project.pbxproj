@@ -129,6 +129,10 @@
 		973C61121E7A1D2800C909EA /* ReplaceOfString.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C61011E7A1D2800C909EA /* ReplaceOfString.m */; };
 		973C61131E7A1D2800C909EA /* UIColor+WebColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C61031E7A1D2800C909EA /* UIColor+WebColor.m */; };
 		973C61171E7B926E00C909EA /* KaijiangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 973C61161E7B926E00C909EA /* KaijiangViewController.m */; };
+		973C61191E7BA3F300C909EA /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61181E7BA3F300C909EA /* UMMobClick.framework */; };
+		973C611B1E7BA44B00C909EA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C611A1E7BA44B00C909EA /* CoreTelephony.framework */; };
+		973C611D1E7BA45F00C909EA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C611C1E7BA45F00C909EA /* libsqlite3.tbd */; };
+		973C611F1E7BA46800C909EA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C611E1E7BA46800C909EA /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -408,6 +412,10 @@
 		973C61031E7A1D2800C909EA /* UIColor+WebColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WebColor.m"; sourceTree = "<group>"; };
 		973C61151E7B926E00C909EA /* KaijiangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaijiangViewController.h; sourceTree = "<group>"; };
 		973C61161E7B926E00C909EA /* KaijiangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaijiangViewController.m; sourceTree = "<group>"; };
+		973C61181E7BA3F300C909EA /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
+		973C611A1E7BA44B00C909EA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		973C611C1E7BA45F00C909EA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		973C611E1E7BA46800C909EA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +423,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973C611F1E7BA46800C909EA /* libz.tbd in Frameworks */,
+				973C611D1E7BA45F00C909EA /* libsqlite3.tbd in Frameworks */,
+				973C611B1E7BA44B00C909EA /* CoreTelephony.framework in Frameworks */,
+				973C61191E7BA3F300C909EA /* UMMobClick.framework in Frameworks */,
 				2EDB79F31E7634100068F544 /* libz.1.2.5.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +514,9 @@
 		2EDB79F11E76340F0068F544 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				973C611E1E7BA46800C909EA /* libz.tbd */,
+				973C611C1E7BA45F00C909EA /* libsqlite3.tbd */,
+				973C611A1E7BA44B00C909EA /* CoreTelephony.framework */,
 				2EDB79F21E7634100068F544 /* libz.1.2.5.tbd */,
 			);
 			name = Frameworks;
@@ -520,6 +535,7 @@
 		2EDB79F51E76344C0068F544 /* ThirdSource */ = {
 			isa = PBXGroup;
 			children = (
+				973C61181E7BA3F300C909EA /* UMMobClick.framework */,
 				2EDB79F61E76344C0068F544 /* AFNetworking */,
 				2EDB7A1A1E76344C0068F544 /* JSONModel */,
 				2EDB7A2F1E76344C0068F544 /* Masonry */,
@@ -1350,6 +1366,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Xinle Tao (CUVR22NJYL)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xinle Tao (CUVR22NJYL)";
 				DEVELOPMENT_TEAM = 4225KQ7WC5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UZLottery/ThirdSource",
+				);
 				GCC_PREFIX_HEADER = UZLottery/UZLottery.pch;
 				INFOPLIST_FILE = UZLottery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1367,6 +1387,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Xinle Tao (4225KQ7WC5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xinle Tao (4225KQ7WC5)";
 				DEVELOPMENT_TEAM = 4225KQ7WC5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UZLottery/ThirdSource",
+				);
 				GCC_PREFIX_HEADER = UZLottery/UZLottery.pch;
 				INFOPLIST_FILE = UZLottery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

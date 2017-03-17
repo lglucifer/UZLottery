@@ -9,13 +9,17 @@
 #import "AppDelegate.h"
 #import "UZAppStartUp.h"
 #import "UZLotteryRedirectVC.h"
+#import <UMMobClick/MobClick.h>
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+- (void)inner_RegisterUM {
+    UMConfigInstance.appKey = @"58cbbede8630f50311001d26";
+    [MobClick startWithConfigure:UMConfigInstance];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

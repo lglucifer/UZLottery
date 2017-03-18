@@ -26,13 +26,14 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor whiteColor];
+        
         
         UIImageView *imageV = [[UIImageView alloc] init];
         imageV.userInteractionEnabled = YES;
         [self addSubview:imageV];
         self.imageV = imageV;
-        imageV.backgroundColor = [UIColor clearColor];
+        imageV.backgroundColor = [UIColor whiteColor];
         
         
         [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -84,10 +85,10 @@
     [self.imageV sd_setImageWithURL:[NSURL URLWithString:media.img]
                    placeholderImage:nil
                           completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-                              if ([imageURL.absoluteString isEqualToString:media.img]) {
-                                  UIImage *newImage = [UIImage scaleImage:image size:weakSelf.imageScaleSize];
-                                  weakSelf.imageV.image = newImage;
-                              }
+//                              if ([imageURL.absoluteString isEqualToString:media.img]) {
+//                                  UIImage *newImage = [UIImage scaleImage:image size:weakSelf.imageScaleSize];
+//                                  weakSelf.imageV.image = newImage;
+//                              }
                           }];
     if (media.can_close &&
         self.enableShowCloseBtn) {

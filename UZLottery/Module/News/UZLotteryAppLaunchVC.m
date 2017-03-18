@@ -12,6 +12,7 @@
 #import "UZLotteryMediaView.h"
 
 @interface UZLotteryAppLaunchVC ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@property (nonatomic,strong)UIPageControl * pageControl;
 @property (nonatomic,strong)NSTimer * timer;
 @property (nonatomic, strong) UZLotteryAppLaunch *appLaunch;
 
@@ -112,6 +113,22 @@
     [collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view).insets(UIEdgeInsetsZero);
     }];
+    
+    
+    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 20.f, self.view.frame.size.width, 20.f)];
+    _pageControl.hidesForSinglePage = YES;
+    _pageControl.userInteractionEnabled = NO;
+    _pageControl.backgroundColor = [UIColor clearColor];
+    _pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+    _pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    _pageControl.currentPage = 0;
+    [self.view addSubview:_pageControl];
+    _pageControl.hidden = YES;
+    [_pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(30).insets(UIEdgeInsetsZero);
+    }];
+    
+    
     //开机图
     UZLotteryMediaView *launchMediaView = [[UZLotteryMediaView alloc] init];
     launchMediaView.hidden = YES;
@@ -165,6 +182,8 @@
         self.collectionView.hidden = NO;
         [self.collectionView reloadData];
         [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"yindaoshowed"];
+        self.pageControl.hidden = NO;
+        self.pageControl.numberOfPages = appLaunch.intro.count;
     }
     //显示网页
     if (appLaunch.app_url &&
@@ -175,8 +194,8 @@
     //显示插屏图
     if (appLaunch.screen) {
         self.maskView.hidden = NO;
-        self.screenMediaView.imageV.layer.cornerRadius = 10;
-        self.screenMediaView.imageV.layer.masksToBounds = YES;
+        self.screenMediaView.layer.cornerRadius = 10;
+        self.screenMediaView.layer.masksToBounds = YES;
         self.screenMediaView.media = appLaunch.screen;
     }
 }
@@ -194,6 +213,14 @@
                          }];
     }
 }
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+
+    NSInteger index = fabs(scrollView.contentOffset.x/scrollView.frame.size.width);
+    _pageControl.currentPage = index;
+}
+
 
 -(void)timeChanged
 {

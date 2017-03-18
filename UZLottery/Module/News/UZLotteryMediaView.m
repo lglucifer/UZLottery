@@ -11,7 +11,7 @@
 
 @interface UZLotteryMediaView()
 
-@property (nonatomic, weak) UIImageView *imageV;
+
 
 @property (nonatomic, weak) UIButton *closeBtn;
 
@@ -26,12 +26,14 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
         
         UIImageView *imageV = [[UIImageView alloc] init];
         imageV.userInteractionEnabled = YES;
         [self addSubview:imageV];
         self.imageV = imageV;
+        imageV.backgroundColor = [UIColor clearColor];
+        
         
         [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(self).insets(UIEdgeInsetsZero);
@@ -52,6 +54,23 @@
             make.top.mas_equalTo(self).mas_offset(10);
             make.width.height.mas_equalTo(25);
         }];
+        
+        self.timerLabel = [[UILabel alloc] init];
+        self.timerLabel.backgroundColor = [UIColor blackColor];
+        [self addSubview:self.timerLabel];
+        [self.timerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(self).mas_offset(-10);
+            make.top.mas_equalTo(self).mas_offset(25);
+            make.width.height.mas_equalTo(30);
+        }];
+        self.timerLabel.layer.cornerRadius = 15;
+        self.timerLabel.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+        self.timerLabel.layer.borderWidth = 1;
+        self.timerLabel.layer.masksToBounds = YES;
+        self.timerLabel.textColor = [UIColor whiteColor];
+        self.timerLabel.textAlignment = NSTextAlignmentCenter;
+        self.timerLabel.hidden = YES;
+        
     }
     return self;
 }

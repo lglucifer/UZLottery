@@ -12,7 +12,7 @@
 #import "UZLotteryMediaView.h"
 
 @interface UZLotteryAppLaunchVC ()<UICollectionViewDelegate, UICollectionViewDataSource>
-
+@property (nonatomic,strong)NSTimer * timer;
 @property (nonatomic, strong) UZLotteryAppLaunch *appLaunch;
 
 @property (nonatomic, weak) UICollectionView *collectionView;
@@ -153,13 +153,18 @@
     //显示开机图
     if (appLaunch.launch) {
         self.launchMediaView.hidden = NO;
+        self.launchMediaView.enableShowCloseBtn = NO;
         self.launchMediaView.media = appLaunch.launch;
+        self.launchMediaView.timerLabel.hidden = NO;
+        self.launchMediaView.timerLabel.text = @"5";
+        _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeChanged) userInfo:nil repeats:YES];
     }
     //显示引导图
     if (appLaunch.intro &&
-        appLaunch.intro.count > 0) {
+        appLaunch.intro.count > 0 && ![[NSUserDefaults standardUserDefaults] objectForKey:@"yindaoshowed"]) {
         self.collectionView.hidden = NO;
         [self.collectionView reloadData];
+        [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"yindaoshowed"];
     }
     //显示网页
     if (appLaunch.app_url &&
@@ -170,6 +175,8 @@
     //显示插屏图
     if (appLaunch.screen) {
         self.maskView.hidden = NO;
+        self.screenMediaView.imageV.layer.cornerRadius = 10;
+        self.screenMediaView.imageV.layer.masksToBounds = YES;
         self.screenMediaView.media = appLaunch.screen;
     }
 }
@@ -185,6 +192,16 @@
                          } completion:^(BOOL finished) {
                              [weakSelf.collectionView removeFromSuperview];
                          }];
+    }
+}
+
+-(void)timeChanged
+{
+    self.launchMediaView.timerLabel.text = [NSString stringWithFormat:@"%d",[self.launchMediaView.timerLabel.text intValue]-1];
+    if ([self.launchMediaView.timerLabel.text intValue]==0) {
+        [_timer invalidate];
+        self.launchMediaView.hidden = YES;
+        [self.launchMediaView removeFromSuperview];
     }
 }
 

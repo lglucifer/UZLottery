@@ -10,6 +10,8 @@
 #import "UZLotteryDetailVC.h"
 #import "UZLotteryNewsCell.h"
 #import "UZSessionManager.h"
+#import "ZixunContent.h"
+#import "NSDate+YYAdd.h"
 
 @interface UZLotteryNewsVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -51,15 +53,30 @@
 }
 
 - (void)inner_Refresh {
-    __weak __typeof(self) weakSelf = self;
+//    __weak __typeof(self) weakSelf = self;
     [[UZSessionManager manager] requestLotteryNewsWithPageType:self.pageType
                                                        Success:^(NSArray *news, NSURLSessionDataTask *dataTask) {
-                                                           weakSelf.items = news;
-                                                           [weakSelf.tableView.mj_header endRefreshing];
-                                                           [weakSelf.tableView reloadData];
+//                                                           weakSelf.items = news;
+//                                                           [weakSelf.tableView.mj_header endRefreshing];
+//                                                           [weakSelf.tableView reloadData];
                                                        } failure:^(NSError *error, NSURLSessionDataTask *dataTask) {
-                                                           [weakSelf.tableView.mj_header endRefreshing];
+//                                                           [weakSelf.tableView.mj_header endRefreshing];
                                                        }];
+    if (self.pageType == UZLotteryNewsType_Page1) {
+        self.items = [UZLotteryNews arrayOfModelsFromDictionaries:[ZixunContent array1]
+                                                            error:nil];
+        [self.items enumerateObjectsUsingBlock:^(UZLotteryNews *news, NSUInteger idx, BOOL * _Nonnull stop) {
+            news.createdTime = [[NSDate date] stringWithFormat:@"yyyy/MM/dd"];
+        }];
+    } else {
+        self.items = [UZLotteryNews arrayOfModelsFromDictionaries:[ZixunContent array2]
+                                                            error:nil];
+        [self.items enumerateObjectsUsingBlock:^(UZLotteryNews *news, NSUInteger idx, BOOL * _Nonnull stop) {
+            news.createdTime = [[NSDate date] stringWithFormat:@"yyyy/MM/dd"];
+        }];
+    }
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView reloadData];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -76,7 +93,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UZLotteryDetailVC *detailVC = [[UZLotteryDetailVC alloc] init];
     UZLotteryNews *news = self.items[indexPath.row];
-    detailVC.link = news.link;
+//    detailVC.link = news.link;
+    detailVC.news = news;
     detailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detailVC animated:YES];
 }

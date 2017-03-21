@@ -49,7 +49,8 @@
     }
     _news = news;
     self.titleLb.text = news.title;
-    self.dateLb.text = [NSString stringWithFormat:@"%@", news.createdTime];
+//    self.dateLb.text = [NSString stringWithFormat:@"%@", news.createdTime];
+    self.dateLb.text = news.createdTime;
 }
 
 @end

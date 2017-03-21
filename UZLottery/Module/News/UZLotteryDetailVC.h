@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UZLotteryModel.h"
 
 @interface UZLotteryDetailVC : UIViewController
 
-@property (nonatomic, copy) NSString *link;
+//@property (nonatomic, copy) NSString *link;
+@property (nonatomic, strong) UZLotteryNews *news;
 
 @end

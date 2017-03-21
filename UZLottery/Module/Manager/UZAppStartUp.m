@@ -62,7 +62,7 @@
                                      selectedImage:highlightImage];
         UZLotteryNewsVC *thirdVC = [[UZLotteryNewsVC alloc] init];
         thirdVC.tabBarItem = item;
-        secondVC.pageType = UZLotteryNewsType_Page2;
+        thirdVC.pageType = UZLotteryNewsType_Page2;
         CSLCNavigationController *thirdNavi = [[CSLCNavigationController alloc] initWithRootViewController:thirdVC];
         
         UITabBarController *tabBarController = [[UITabBarController alloc] init];

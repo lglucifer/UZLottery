@@ -14,10 +14,13 @@
 
 @interface UZLotteryNews : UZLotteryModel
 
-@property (nonatomic, copy) NSString *newsId;
-@property (nonatomic, copy) NSString *link;
+//@property (nonatomic, copy) NSString *newsId;
+//@property (nonatomic, copy) NSString *link;
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, strong) NSDate *createdTime;
+@property (nonatomic, copy) NSString *from;
+@property (nonatomic, copy) NSString *createdTime;
+@property (nonatomic, copy) NSString *topimageurl;
+@property (nonatomic, copy) NSString *content;
 
 @end
 

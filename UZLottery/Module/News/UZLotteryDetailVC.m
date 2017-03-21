@@ -10,6 +10,9 @@
 
 @interface UZLotteryDetailVC ()
 
+@property (nonatomic, weak) UIImageView *imageV;
+@property (nonatomic, weak) UILabel *textLb;
+
 @end
 
 @implementation UZLotteryDetailVC
@@ -48,18 +51,20 @@
     style.firstLineHeadIndent = 20.f;
     UILabel *textLb = [[UILabel alloc] init];
     textLb.numberOfLines = 0;
-    textLb.attributedText = [[NSAttributedString alloc] initWithString:self.news.content
-                                                            attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18],
-                                                                         NSForegroundColorAttributeName: [UIColor colorWithRGB:0x333333],
-                                                                         NSParagraphStyleAttributeName: style}];
+//    textLb.attributedText = [[NSAttributedString alloc] initWithString:self.news.content
+//                                                            attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18],
+//                                                                         NSForegroundColorAttributeName: [UIColor colorWithRGB:0x333333],
+//                                                                         NSParagraphStyleAttributeName: style}];
     textLb.preferredMaxLayoutWidth = SCREEN_WIDTH - 20;
     [scrollView addSubview:textLb];
+    self.textLb = textLb;
 
     if (self.news.topimageurl &&
         self.news.topimageurl.length > 0) {
         UIImageView *imageV = [[UIImageView alloc] init];
-        [imageV sd_setImageWithURL:[NSURL URLWithString:self.news.topimageurl] placeholderImage:nil];
+//        [imageV sd_setImageWithURL:[NSURL URLWithString:self.news.topimageurl] placeholderImage:nil];
         [scrollView addSubview:imageV];
+        self.imageV = imageV;
         [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(scrollView).mas_offset(10);
             make.centerX.equalTo(scrollView);
@@ -94,8 +99,19 @@
     [backButton addTarget:self action:@selector(backButtonAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *  backBarButton = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     self.navigationItem.leftBarButtonItem = backBarButton;
-
+    
+    __weak __typeof(self) weakSelf = self;
+    [self showActivityIndicatorTitle:@"正在加载" inView:self.view];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [weakSelf.imageV sd_setImageWithURL:[NSURL URLWithString:weakSelf.news.topimageurl] placeholderImage:nil];
+        weakSelf.textLb.attributedText = [[NSAttributedString alloc] initWithString:weakSelf.news.content
+                                                                     attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18],
+                                                                                  NSForegroundColorAttributeName: [UIColor colorWithRGB:0x333333],
+                                                                                  NSParagraphStyleAttributeName: style}];
+        [weakSelf hideWithAfterDelay:YES];
+    });
 }
+
 -(void)backButtonAction
 {
     [self.navigationController popViewControllerAnimated:YES];

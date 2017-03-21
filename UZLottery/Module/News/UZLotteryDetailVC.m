@@ -102,13 +102,13 @@
     
     __weak __typeof(self) weakSelf = self;
     [self showActivityIndicatorTitle:@"正在加载" inView:self.view];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [weakSelf.imageV sd_setImageWithURL:[NSURL URLWithString:weakSelf.news.topimageurl] placeholderImage:nil];
         weakSelf.textLb.attributedText = [[NSAttributedString alloc] initWithString:weakSelf.news.content
                                                                      attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18],
                                                                                   NSForegroundColorAttributeName: [UIColor colorWithRGB:0x333333],
                                                                                   NSParagraphStyleAttributeName: style}];
-        [weakSelf hideWithAfterDelay:YES];
+        [weakSelf hideWithAfterDelay:NO];
     });
 }
 

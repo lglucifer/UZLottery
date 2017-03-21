@@ -143,6 +143,7 @@
 		973C61321E7BFD6500C909EA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61311E7BFD6500C909EA /* AVFoundation.framework */; };
 		973C61341E7BFD6C00C909EA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61331E7BFD6C00C909EA /* CoreLocation.framework */; };
 		973C61361E7BFD7200C909EA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61351E7BFD7200C909EA /* AdSupport.framework */; };
+		D859B1F01E80EB1D0088BE9D /* ZixunContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D859B1EF1E80EB1D0088BE9D /* ZixunContent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -439,6 +440,8 @@
 		973C61331E7BFD6C00C909EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		973C61351E7BFD7200C909EA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		973C61371E7C0DA700C909EA /* UZLottery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UZLottery.entitlements; sourceTree = "<group>"; };
+		D859B1EE1E80EB1D0088BE9D /* ZixunContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZixunContent.h; sourceTree = "<group>"; };
+		D859B1EF1E80EB1D0088BE9D /* ZixunContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZixunContent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -936,6 +939,8 @@
 			children = (
 				2E648AE01E7A39A100E1308C /* UZLotteryAppLaunchMediaCell.h */,
 				2E648AE11E7A39A100E1308C /* UZLotteryAppLaunchMediaCell.m */,
+				D859B1EE1E80EB1D0088BE9D /* ZixunContent.h */,
+				D859B1EF1E80EB1D0088BE9D /* ZixunContent.m */,
 				973C60E01E7A1D2800C909EA /* GameDLTView */,
 				2EFFC9331E78D40C0010FD7D /* UZLotteryXuanhaoVC.h */,
 				2EFFC9341E78D40C0010FD7D /* UZLotteryXuanhaoVC.m */,
@@ -1278,6 +1283,7 @@
 				973C61171E7B926E00C909EA /* KaijiangViewController.m in Sources */,
 				2EDB7B081E76344C0068F544 /* NSString+YYAdd.m in Sources */,
 				973C610B1E7A1D2800C909EA /* GameBetContent.m in Sources */,
+				D859B1F01E80EB1D0088BE9D /* ZixunContent.m in Sources */,
 				973C61041E7A1D2800C909EA /* BallsCollectionViewCell.m in Sources */,
 				2EDB7AE31E76344C0068F544 /* MJRefreshAutoStateFooter.m in Sources */,
 				2EDB7B051E76344C0068F544 /* NSDate+YYAdd.m in Sources */,

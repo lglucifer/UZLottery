@@ -10,6 +10,7 @@
 #import "UZLotteryNewsCell.h"
 #import "UZSessionManager.h"
 #import "UZLotteryModel.h"
+#import "MBProgressHUD.h"
 @interface KaijiangViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
@@ -62,13 +63,16 @@
 
 - (void)inner_Refresh {
     __weak __typeof(self) weakSelf = self;
-    [[UZSessionManager manager] requestShishicaiKaijiangWithName:@"cqssc"
+    [MBProgressHUD showHUDAddedTo:self.view animated:NO];
+    [[UZSessionManager manager] requestShishicaiKaijiangWithName:self.gamename
                                                        Success:^(NSArray *news, NSURLSessionDataTask *dataTask) {
                                                            weakSelf.items = news;
                                                            [weakSelf.tableView.mj_header endRefreshing];
                                                            [weakSelf.tableView reloadData];
+                                                           [MBProgressHUD hideHUDForView:self.view animated:NO];
                                                        } failure:^(NSError *error, NSURLSessionDataTask *dataTask) {
                                                            [weakSelf.tableView.mj_header endRefreshing];
+                                                           [MBProgressHUD hideHUDForView:self.view animated:NO];
                                                        }];
 }
 

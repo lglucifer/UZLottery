@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface KaijiangViewController : UIViewController
-
+@property (nonatomic,strong)NSString * gamename;
 @end

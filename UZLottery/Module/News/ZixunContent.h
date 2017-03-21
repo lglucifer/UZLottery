@@ -10,4 +10,5 @@
 
 @interface ZixunContent : NSObject
 +(NSArray *)array1;
++(NSArray *)array2;
 @end

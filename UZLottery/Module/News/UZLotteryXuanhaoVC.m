@@ -47,6 +47,11 @@
             cell.titleLb.text = @"重庆时时彩";
             cell.titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
         }
+        else if (indexPath.row==1) {
+            cell.icon.image = [UIImage imageNamed:@"shishicaiicon"];
+            cell.titleLb.text = @"黑龙江时时彩";
+            cell.titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
+        }
         else
         {
             cell.icon.image = [UIImage imageNamed:@"home_icon_20"];
@@ -89,7 +94,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    if (section==0) {
+        return 3;
+    }
+    else{
+        return 2;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -101,6 +111,13 @@
         if (indexPath.row==0) {
             KaijiangViewController * dv = [[KaijiangViewController alloc] init];
             dv.hidesBottomBarWhenPushed = YES;
+            dv.gamename = @"cqssc";
+            [self.navigationController pushViewController:dv animated:YES];
+        }
+        else if (indexPath.row==1) {
+            KaijiangViewController * dv = [[KaijiangViewController alloc] init];
+            dv.hidesBottomBarWhenPushed = YES;
+            dv.gamename = @"hljssc";
             [self.navigationController pushViewController:dv animated:YES];
         }
         else{

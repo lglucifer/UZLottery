@@ -18,9 +18,9 @@
 #import "CombineArithmetic.h"
 
 #import "NavTitleButton.h"
-
+#import "APPFaceSharingView.h"
 //#import "TicketInfo.h"
-
+#import "GTMBase64.h"
 #define DisplayBetInfo(B, M)  [NSString stringWithFormat:@"共%@注 %@元", B, M]
 
 @interface DLTViewController ()<GameNumbersTableViewDelegate, BetFooterViewDelegate, UIAlertViewDelegate>
@@ -649,12 +649,19 @@
 //        }
 //    }
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
-                                                    message:@"号码已经选择好，请到附近彩票站投注"
-                                                   delegate:self
-                                          cancelButtonTitle:@"好"
-                                          otherButtonTitles:nil];
-    [alert show];
+    NSString * n = get_random_uuid();
+    
+    NSData *nsdata = [n
+                      dataUsingEncoding:NSUTF8StringEncoding];
+    
+    // Get NSString from NSData object in Base64
+    NSString *base64Encoded = [nsdata base64EncodedStringWithOptions:0];
+    
+    
+    
+    APPFaceSharingView *share = [[APPFaceSharingView alloc] initWithTitle:@"请到附近彩票店投注" qrcodeImage:nil qrcodeImageStr:base64Encoded Desc:nil];
+    
+    [share show];
 }
 
 #pragma mark - 号码验证

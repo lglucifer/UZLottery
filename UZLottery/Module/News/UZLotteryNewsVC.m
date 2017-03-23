@@ -42,8 +42,24 @@
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view).insets(UIEdgeInsetsZero);
     }];
+    
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(0, 0, 54.f, 40.f);
+    backButton.backgroundColor = [UIColor clearColor];
+    [backButton setTitle:@"返回" forState:UIControlStateNormal];
+    [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    backButton.titleLabel.font = [UIFont systemFontOfSize:17.f];
+    [backButton setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
+    backButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 50.f - 20.f);
+    backButton.titleEdgeInsets = UIEdgeInsetsMake(0, 2.f, 0, 0);
+    [backButton addTarget:self action:@selector(backButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *  backBarButton = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = backBarButton;
 }
-
+-(void)backButtonAction
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if (!self.items ||
@@ -78,6 +94,7 @@
     [self.tableView.mj_header endRefreshing];
     [self.tableView reloadData];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UZLotteryNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UZLotteryNewsCell class])];

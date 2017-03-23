@@ -6,19 +6,20 @@
 //  Copyright © 2017年 com.uzero. All rights reserved.
 //
 
-#import "UZLotteryXuanhaoVC.h"
+#import "ZIXUNListVC.h"
 #import "UZLotteryXuanhaoDetailVC.h"
 #import "UZLotteryXuanhaoCell.h"
 #import "DLTViewController.h"
 #import "KaijiangViewController.h"
 #import "Game11in5ViewController.h"
-@interface UZLotteryXuanhaoVC ()<UITableViewDelegate, UITableViewDataSource>
+#import "UZLotteryNewsVC.h"
+@interface ZIXUNListVC ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
 
 @end
 
-@implementation UZLotteryXuanhaoVC
+@implementation ZIXUNListVC
 
 - (NSString *)title {
     return self.tabBarItem.title;
@@ -40,58 +41,102 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    if (indexPath.section==0) {
         UZLotteryXuanhaoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UZLotteryXuanhaoCell class])];
+        
         if (indexPath.row==0) {
-            cell.icon.image = [UIImage imageNamed:@"home_icon_10"];
-            cell.titleLb.text = @"超级大乐透";
+            cell.icon.image = [UIImage imageNamed:@"shishicaiicon"];
+            cell.titleLb.text = @"重庆时时彩";
             cell.titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
         }
-    else if (indexPath.row==1) {
-        cell.icon.image = [UIImage imageNamed:@"guangdong11in5"];
-        cell.titleLb.text = @"11选5";
-        cell.titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
-    }
+        else if (indexPath.row==1) {
+            cell.icon.image = [UIImage imageNamed:@"shishicaiicon"];
+            cell.titleLb.text = @"黑龙江时时彩";
+            cell.titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
+        }
         else
         {
             cell.icon.image = [UIImage imageNamed:@"home_icon_20"];
-            cell.titleLb.text = @"更多游戏选号敬请期待";
+            cell.titleLb.text = @"更多开奖信息敬请期待";
             cell.titleLb.textColor = [UIColor lightGrayColor];
         }
-
         return cell;
-    
+    }
+    else{
+        UZLotteryXuanhaoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UZLotteryXuanhaoCell class])];
+        if (indexPath.row==0) {
+            cell.icon.image = [UIImage imageNamed:@"zixund"];
+            cell.titleLb.text = @"资讯信息";
+            cell.titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
+        }
+
+        
+        return cell;
+    }
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section==0) {
+        return @"开奖信息";
+    }
+    else{
+        return @"资讯";
+    }
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    if (section==0) {
+        return 3;
+    }
+    else{
+        return 1;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    //    UZLotteryXuanhaoDetailVC *detailVC = [[UZLotteryXuanhaoDetailVC alloc] init];
+    //    detailVC.hidesBottomBarWhenPushed = YES;
+    //    [self.navigationController pushViewController:detailVC animated:YES];
+    if (indexPath.section==0) {
         if (indexPath.row==0) {
-            DLTViewController * dv = [[DLTViewController alloc] init];
+            KaijiangViewController * dv = [[KaijiangViewController alloc] init];
             dv.hidesBottomBarWhenPushed = YES;
+            dv.gamename = @"cqssc";
             [self.navigationController pushViewController:dv animated:YES];
         }
         else if (indexPath.row==1) {
-//            KaijiangViewController * dv = [[KaijiangViewController alloc] init];
-//            dv.hidesBottomBarWhenPushed = YES;
-//            dv.gamename = @"hljssc";
-//            [self.navigationController pushViewController:dv animated:YES];
+                KaijiangViewController * dv = [[KaijiangViewController alloc] init];
+                dv.hidesBottomBarWhenPushed = YES;
+                dv.gamename = @"hljssc";
+                [self.navigationController pushViewController:dv animated:YES];
             
-            Game11in5ViewController * dv = [[Game11in5ViewController alloc] init];
+
+        }
+        else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
+                                                            message:@"更多开奖资讯敬请期待..."
+                                                           delegate:self
+                                                  cancelButtonTitle:@"好"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+    }
+    else
+    {
+        if (indexPath.row==0) {
+            UZLotteryNewsVC * dv = [[UZLotteryNewsVC alloc] init];
             dv.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:dv animated:YES];
         }
-        else{
+        else
+        {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"
                                                             message:@"更多游戏选号敬请期待..."
                                                            delegate:self
@@ -99,8 +144,9 @@
                                                   otherButtonTitles:nil];
             [alert show];
         }
+    }
     
-
+    
 }
 
 - (void)didReceiveMemoryWarning {

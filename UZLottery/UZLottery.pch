@@ -12,6 +12,14 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+
+#import <Foundation/Foundation.h>
+
 #import "UIColor+YYAdd.h"
 
 #import "Masonry.h"
@@ -19,6 +27,11 @@
 #import "NSObject+HUD.h"
 #import "UIImageView+WebCache.h"
 #import "UIColor+WebColor.h"
+#import "CoreData+MagicalRecord.h"
+
+#endif
+
+
 
 #define is_iPad  [[UIDevice currentDevice].model rangeOfString:@"iPad"]
 

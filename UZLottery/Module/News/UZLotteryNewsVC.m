@@ -19,6 +19,8 @@
 
 @property (nonatomic, copy) NSArray *items;
 
+@property (nonatomic, assign) NSInteger pageIndex;
+
 @end
 
 @implementation UZLotteryNewsVC
@@ -29,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.pageIndex = 1;
     UITableView *tableView = [[UITableView alloc] init];
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -40,6 +43,7 @@
                                                            refreshingAction:@selector(inner_Refresh)];
     tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
                                                          refreshingAction:@selector(inner_LoadMore)];
+    tableView.mj_footer.hidden = YES;
     self.tableView = tableView;
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view).insets(UIEdgeInsetsZero);
@@ -93,6 +97,8 @@
             news.createdTime = [[NSDate date] stringWithFormat:@"yyyy/MM/dd"];
         }];
     }
+    self.pageIndex = 1;
+    self.tableView.mj_footer.hidden = NO;
     [self.tableView.mj_header endRefreshing];
     [self.tableView reloadData];
 }
@@ -102,17 +108,18 @@
         NSArray *loadMoreArray = [UZLotteryNews arrayOfModelsFromDictionaries:[ZixunContent array2]
                                                                         error:nil];
         [loadMoreArray enumerateObjectsUsingBlock:^(UZLotteryNews *news, NSUInteger idx, BOOL * _Nonnull stop) {
-            news.createdTime = [[NSDate dateWithTimeInterval:(-24 * 60 * 60) sinceDate:[NSDate date]] stringWithFormat:@"yyyy/MM/dd"];
+            news.createdTime = [[NSDate dateWithTimeInterval:(-24 * 60 * 60 * self.pageIndex) sinceDate:[NSDate date]] stringWithFormat:@"yyyy/MM/dd"];
         }];
         self.items = [[NSArray arrayWithArray:self.items] arrayByAddingObjectsFromArray:loadMoreArray];
     } else {
         NSArray *loadMoreArray = [UZLotteryNews arrayOfModelsFromDictionaries:[ZixunContent array1]
                                                             error:nil];
         [loadMoreArray enumerateObjectsUsingBlock:^(UZLotteryNews *news, NSUInteger idx, BOOL * _Nonnull stop) {
-            news.createdTime = [[NSDate dateWithTimeInterval:(-24 * 60 * 60) sinceDate:[NSDate date]] stringWithFormat:@"yyyy/MM/dd"];
+            news.createdTime = [[NSDate dateWithTimeInterval:(-24 * 60 * 60 * self.pageIndex) sinceDate:[NSDate date]] stringWithFormat:@"yyyy/MM/dd"];
         }];
         self.items = [[NSArray arrayWithArray:self.items] arrayByAddingObjectsFromArray:loadMoreArray];
     }
+    self.pageIndex += 1;
     [self.tableView.mj_footer endRefreshing];
     [self.tableView reloadData];
 }

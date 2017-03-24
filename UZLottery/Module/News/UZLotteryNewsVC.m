@@ -38,6 +38,8 @@
     [self.view addSubview:tableView];
     tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
                                                            refreshingAction:@selector(inner_Refresh)];
+    tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
+                                                         refreshingAction:@selector(inner_LoadMore)];
     self.tableView = tableView;
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view).insets(UIEdgeInsetsZero);
@@ -95,6 +97,25 @@
     [self.tableView reloadData];
 }
 
+- (void)inner_LoadMore {
+    if (self.pageType == UZLotteryNewsType_Page1) {
+        NSArray *loadMoreArray = [UZLotteryNews arrayOfModelsFromDictionaries:[ZixunContent array2]
+                                                                        error:nil];
+        [loadMoreArray enumerateObjectsUsingBlock:^(UZLotteryNews *news, NSUInteger idx, BOOL * _Nonnull stop) {
+            news.createdTime = [[NSDate dateWithTimeInterval:(-24 * 60 * 60) sinceDate:[NSDate date]] stringWithFormat:@"yyyy/MM/dd"];
+        }];
+        self.items = [[NSArray arrayWithArray:self.items] arrayByAddingObjectsFromArray:loadMoreArray];
+    } else {
+        NSArray *loadMoreArray = [UZLotteryNews arrayOfModelsFromDictionaries:[ZixunContent array1]
+                                                            error:nil];
+        [loadMoreArray enumerateObjectsUsingBlock:^(UZLotteryNews *news, NSUInteger idx, BOOL * _Nonnull stop) {
+            news.createdTime = [[NSDate dateWithTimeInterval:(-24 * 60 * 60) sinceDate:[NSDate date]] stringWithFormat:@"yyyy/MM/dd"];
+        }];
+        self.items = [[NSArray arrayWithArray:self.items] arrayByAddingObjectsFromArray:loadMoreArray];
+    }
+    [self.tableView.mj_footer endRefreshing];
+    [self.tableView reloadData];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UZLotteryNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UZLotteryNewsCell class])];

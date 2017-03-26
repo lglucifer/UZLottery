@@ -7,11 +7,14 @@
 //
 
 #import "UZLotteryDetailVC.h"
-
+#import "ShareSheet.h"
+#import "SVProgressHUD.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 @interface UZLotteryDetailVC ()
 
 @property (nonatomic, weak) UIImageView *imageV;
 @property (nonatomic, weak) UILabel *textLb;
+@property (nonatomic, weak) UIScrollView * scrll;
 
 @end
 
@@ -40,6 +43,7 @@
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:scrollView];
+    self.scrll = scrollView;
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view).insets(UIEdgeInsetsZero);
     }];
@@ -100,6 +104,19 @@
     UIBarButtonItem *  backBarButton = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     self.navigationItem.leftBarButtonItem = backBarButton;
     
+    
+    UIButton *rightb = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightb.frame = CGRectMake(0, 0, 54.f, 40.f);
+    rightb.backgroundColor = [UIColor clearColor];
+    [rightb setTitle:@"···" forState:UIControlStateNormal];
+    [rightb setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    rightb.titleLabel.font = [UIFont boldSystemFontOfSize:22.f];
+
+        rightb.titleEdgeInsets = UIEdgeInsetsMake(0, 2.f, 0, 0);
+    [rightb addTarget:self action:@selector(shareDo) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *  rightbc = [[UIBarButtonItem alloc] initWithCustomView:rightb];
+    self.navigationItem.rightBarButtonItem = rightbc;
+    
     __weak __typeof(self) weakSelf = self;
     [self showActivityIndicatorTitle:@"正在加载" inView:self.view];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -110,6 +127,58 @@
                                                                                   NSParagraphStyleAttributeName: style}];
         [weakSelf hideWithAfterDelay:NO];
     });
+}
+
+-(void)shareDo
+{
+    NSMutableArray * iconArray = [NSMutableArray array];
+    NSMutableArray * titleArray = [NSMutableArray array];
+    
+        [iconArray addObject:@"qqicon"];
+
+        [titleArray addObject:@"保存图片"];
+
+    
+    ShareSheet * shareSheet = [[ShareSheet alloc]initWithIconArray:iconArray titleArray:titleArray action:^(NSInteger index) {
+        [SVProgressHUD showWithStatus:@"生成图片..."];
+        
+        
+        
+        
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(self.scrll.frame.size.width, self.scrll.frame.size.height), NO, [UIScreen mainScreen].scale);
+        [self.scrll.layer renderInContext:UIGraphicsGetCurrentContext()];
+        
+        UIImage*image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        
+        
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        // Request to save the image to camera roll
+        
+//        __weak __typeof(self) weakSelf = self;
+
+        
+        [library writeImageToSavedPhotosAlbum:image.CGImage
+                                  orientation:(ALAssetOrientation)image.imageOrientation
+                              completionBlock:^(NSURL *assetURL, NSError *error){
+                                  if (!error) {
+                                      [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+                                  } else {
+                                      [SVProgressHUD showErrorWithStatus:@"保存失败"];
+                                  }
+                              }];
+        
+
+        
+        
+        
+    }];
+    [shareSheet show];
+       
+    
+
 }
 
 -(void)backButtonAction

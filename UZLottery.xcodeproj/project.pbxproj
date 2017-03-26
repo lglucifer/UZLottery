@@ -143,6 +143,13 @@
 		973C61321E7BFD6500C909EA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61311E7BFD6500C909EA /* AVFoundation.framework */; };
 		973C61341E7BFD6C00C909EA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61331E7BFD6C00C909EA /* CoreLocation.framework */; };
 		973C61361E7BFD7200C909EA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973C61351E7BFD7200C909EA /* AdSupport.framework */; };
+		978A99F51E87A83500EFEFAA /* KaijiangTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A99F41E87A83500EFEFAA /* KaijiangTableViewCell.m */; };
+		978A99F81E87B16700EFEFAA /* ODSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A99F71E87B16600EFEFAA /* ODSSettingViewController.m */; };
+		978A99FB1E87B25700EFEFAA /* OSDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A99FA1E87B25700EFEFAA /* OSDWebViewController.m */; };
+		978A99FE1E87B2A600EFEFAA /* ODSVersionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A99FD1E87B2A600EFEFAA /* ODSVersionViewController.m */; };
+		978A9A031E87B39700EFEFAA /* SGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A9A001E87B39700EFEFAA /* SGProgressView.m */; };
+		978A9A041E87B39700EFEFAA /* UINavigationController+SGProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A9A021E87B39700EFEFAA /* UINavigationController+SGProgress.m */; };
+		978A9A071E87B8EE00EFEFAA /* ShareSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A9A061E87B8ED00EFEFAA /* ShareSheet.m */; };
 		D82EA7DA1E835EAF00A7603D /* Game11in5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82EA7D81E835EAF00A7603D /* Game11in5ViewController.m */; };
 		D82EA7DD1E835F4C00A7603D /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82EA7DC1E835F4C00A7603D /* QRCodeViewController.m */; };
 		D82EA7EF1E835FEE00A7603D /* BetContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D82EA7E21E835FEE00A7603D /* BetContentCell.m */; };
@@ -494,6 +501,20 @@
 		973C61331E7BFD6C00C909EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		973C61351E7BFD7200C909EA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		973C61371E7C0DA700C909EA /* UZLottery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UZLottery.entitlements; sourceTree = "<group>"; };
+		978A99F31E87A83500EFEFAA /* KaijiangTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KaijiangTableViewCell.h; sourceTree = "<group>"; };
+		978A99F41E87A83500EFEFAA /* KaijiangTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KaijiangTableViewCell.m; sourceTree = "<group>"; };
+		978A99F61E87B16600EFEFAA /* ODSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSSettingViewController.h; sourceTree = "<group>"; };
+		978A99F71E87B16600EFEFAA /* ODSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSSettingViewController.m; sourceTree = "<group>"; };
+		978A99F91E87B25700EFEFAA /* OSDWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDWebViewController.h; sourceTree = "<group>"; };
+		978A99FA1E87B25700EFEFAA /* OSDWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDWebViewController.m; sourceTree = "<group>"; };
+		978A99FC1E87B2A600EFEFAA /* ODSVersionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSVersionViewController.h; sourceTree = "<group>"; };
+		978A99FD1E87B2A600EFEFAA /* ODSVersionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODSVersionViewController.m; sourceTree = "<group>"; };
+		978A99FF1E87B39700EFEFAA /* SGProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGProgressView.h; sourceTree = "<group>"; };
+		978A9A001E87B39700EFEFAA /* SGProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGProgressView.m; sourceTree = "<group>"; };
+		978A9A011E87B39700EFEFAA /* UINavigationController+SGProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SGProgress.h"; sourceTree = "<group>"; };
+		978A9A021E87B39700EFEFAA /* UINavigationController+SGProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SGProgress.m"; sourceTree = "<group>"; };
+		978A9A051E87B8ED00EFEFAA /* ShareSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSheet.h; sourceTree = "<group>"; };
+		978A9A061E87B8ED00EFEFAA /* ShareSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareSheet.m; sourceTree = "<group>"; };
 		D82EA7D71E835EAF00A7603D /* Game11in5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game11in5ViewController.h; sourceTree = "<group>"; };
 		D82EA7D81E835EAF00A7603D /* Game11in5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game11in5ViewController.m; sourceTree = "<group>"; };
 		D82EA7DB1E835F4C00A7603D /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
@@ -1123,8 +1144,22 @@
 				2EFFC93A1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m */,
 				973C60A61E7A0EE000C909EA /* DLTViewController.h */,
 				973C60A71E7A0EE000C909EA /* DLTViewController.m */,
+				978A99F91E87B25700EFEFAA /* OSDWebViewController.h */,
+				978A99FA1E87B25700EFEFAA /* OSDWebViewController.m */,
+				978A99FC1E87B2A600EFEFAA /* ODSVersionViewController.h */,
+				978A99FD1E87B2A600EFEFAA /* ODSVersionViewController.m */,
+				978A99F61E87B16600EFEFAA /* ODSSettingViewController.h */,
+				978A99F71E87B16600EFEFAA /* ODSSettingViewController.m */,
 				973C61151E7B926E00C909EA /* KaijiangViewController.h */,
 				973C61161E7B926E00C909EA /* KaijiangViewController.m */,
+				978A99F31E87A83500EFEFAA /* KaijiangTableViewCell.h */,
+				978A99F41E87A83500EFEFAA /* KaijiangTableViewCell.m */,
+				978A99FF1E87B39700EFEFAA /* SGProgressView.h */,
+				978A9A001E87B39700EFEFAA /* SGProgressView.m */,
+				978A9A011E87B39700EFEFAA /* UINavigationController+SGProgress.h */,
+				978A9A021E87B39700EFEFAA /* UINavigationController+SGProgress.m */,
+				978A9A051E87B8ED00EFEFAA /* ShareSheet.h */,
+				978A9A061E87B8ED00EFEFAA /* ShareSheet.m */,
 				2EDB7B131E7635430068F544 /* UZLotteryNewsVC.h */,
 				2EDB7B141E7635430068F544 /* UZLotteryNewsVC.m */,
 				2EDB7B301E7662B90068F544 /* UZLotteryDetailVC.h */,
@@ -1557,6 +1592,7 @@
 				973C61071E7A1D2800C909EA /* CombineArithmetic.m in Sources */,
 				2EDB7AC71E76344C0068F544 /* UIRefreshControl+AFNetworking.m in Sources */,
 				2EDB7AE91E76344C0068F544 /* MJRefreshStateHeader.m in Sources */,
+				978A99FB1E87B25700EFEFAA /* OSDWebViewController.m in Sources */,
 				2EDB7AD11E76344C0068F544 /* MASCompositeConstraint.m in Sources */,
 				2EDB7AD51E76344C0068F544 /* MASViewAttribute.m in Sources */,
 				973C610E1E7A1D2800C909EA /* GameViewFlowLayout.m in Sources */,
@@ -1576,6 +1612,7 @@
 				2EDB7AC61E76344C0068F544 /* UIProgressView+AFNetworking.m in Sources */,
 				D82EA8BA1E83708100A7603D /* APPFaceSharingView.m in Sources */,
 				973C60A81E7A0EE000C909EA /* DLTViewController.m in Sources */,
+				978A9A031E87B39700EFEFAA /* SGProgressView.m in Sources */,
 				D82EA8881E83686700A7603D /* BetQRCodeView.m in Sources */,
 				2EDB7AF11E76344C0068F544 /* NSData+ImageContentType.m in Sources */,
 				D82EA8501E83634700A7603D /* NSObject+MagicalDataImport.m in Sources */,
@@ -1651,6 +1688,7 @@
 				2EDB7AC11E76344C0068F544 /* AFImageDownloader.m in Sources */,
 				973C61081E7A1D2800C909EA /* CSLCNavigationController.m in Sources */,
 				2EDB7AD91E76344C0068F544 /* View+MASAdditions.m in Sources */,
+				978A99F51E87A83500EFEFAA /* KaijiangTableViewCell.m in Sources */,
 				D82EA89F1E8368E200A7603D /* qrspec.c in Sources */,
 				D82EA85A1E83634700A7603D /* NSManagedObjectContext+MagicalSaves.m in Sources */,
 				2EDB7AD01E76344C0068F544 /* JSONValueTransformer.m in Sources */,
@@ -1666,6 +1704,7 @@
 				2EDB7AFC1E76344C0068F544 /* UIImage+GIF.m in Sources */,
 				2EDB7B011E76344C0068F544 /* UIView+WebCache.m in Sources */,
 				D82EA8A81E83698600A7603D /* UIImage+Additions.m in Sources */,
+				978A9A071E87B8EE00EFEFAA /* ShareSheet.m in Sources */,
 				D82EA8A21E8368E200A7603D /* QRCodeGenerator.mm in Sources */,
 				D82EA8C81E83928400A7603D /* AES128Wrapper.m in Sources */,
 				2EFFC9431E78DFA60010FD7D /* MBProgressHUD+CustomView.m in Sources */,
@@ -1676,6 +1715,7 @@
 				D82EA8651E83634700A7603D /* MagicalRecord.m in Sources */,
 				2EDB7ABE1E76344C0068F544 /* AFURLResponseSerialization.m in Sources */,
 				2EDB7AD61E76344C0068F544 /* MASViewConstraint.m in Sources */,
+				978A99FE1E87B2A600EFEFAA /* ODSVersionViewController.m in Sources */,
 				D82EA8541E83634700A7603D /* NSManagedObject+MagicalDataImport.m in Sources */,
 				2EDB7AED1E76344C0068F544 /* UIScrollView+MJExtension.m in Sources */,
 				D82EA7F11E835FEE00A7603D /* BetFooterView.m in Sources */,
@@ -1696,6 +1736,7 @@
 				2EDB7AF41E76344C0068F544 /* SDImageCacheConfig.m in Sources */,
 				D82EA89C1E8368E200A7603D /* mask.c in Sources */,
 				973C61171E7B926E00C909EA /* KaijiangViewController.m in Sources */,
+				978A9A041E87B39700EFEFAA /* UINavigationController+SGProgress.m in Sources */,
 				2EDB7B081E76344C0068F544 /* NSString+YYAdd.m in Sources */,
 				973C610B1E7A1D2800C909EA /* GameBetContent.m in Sources */,
 				D859B1F01E80EB1D0088BE9D /* ZixunContent.m in Sources */,
@@ -1705,6 +1746,7 @@
 				D82EA8601E83634700A7603D /* MagicalRecord+ErrorHandling.m in Sources */,
 				D82EA8CB1E83928400A7603D /* NSData+Base64.m in Sources */,
 				2EDB7AE31E76344C0068F544 /* MJRefreshAutoStateFooter.m in Sources */,
+				978A99F81E87B16700EFEFAA /* ODSSettingViewController.m in Sources */,
 				2EDB7B051E76344C0068F544 /* NSDate+YYAdd.m in Sources */,
 				2EDB7AC41E76344C0068F544 /* UIButton+AFNetworking.m in Sources */,
 				2EDB7AFA1E76344C0068F544 /* SDWebImagePrefetcher.m in Sources */,

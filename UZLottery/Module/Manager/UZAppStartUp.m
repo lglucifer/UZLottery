@@ -12,6 +12,7 @@
 #import "UZLotteryAppLaunchVC.h"
 #import "CSLCNavigationController.h"
 #import "ZIXUNListVC.h"
+#import "ODSSettingViewController.h"
 @interface UZAppStartUp()
 
 @property (nonatomic, strong, readwrite) UITabBarController *rootViewController;
@@ -56,18 +57,18 @@
 //        secondVC.pageType = UZLotteryNewsType_Page1;
         CSLCNavigationController *secondNavi = [[CSLCNavigationController alloc] initWithRootViewController:secondVC];
         
-//        normalImage = [[UIImage imageNamed:@"hangye_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        highlightImage = [[UIImage imageNamed:@"hangye_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        item = [[UITabBarItem alloc] initWithTitle:@"行业动态"
-//                                             image:normalImage
-//                                     selectedImage:highlightImage];
-//        UZLotteryNewsVC *thirdVC = [[UZLotteryNewsVC alloc] init];
-//        thirdVC.tabBarItem = item;
+        normalImage = [[UIImage imageNamed:@"hangye_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        highlightImage = [[UIImage imageNamed:@"hangye_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        item = [[UITabBarItem alloc] initWithTitle:@"设置"
+                                             image:normalImage
+                                     selectedImage:highlightImage];
+        ODSSettingViewController *thirdVC = [[ODSSettingViewController alloc] init];
+        thirdVC.tabBarItem = item;
 //        thirdVC.pageType = UZLotteryNewsType_Page2;
-//        CSLCNavigationController *thirdNavi = [[CSLCNavigationController alloc] initWithRootViewController:thirdVC];
+        CSLCNavigationController *thirdNavi = [[CSLCNavigationController alloc] initWithRootViewController:thirdVC];
         
         UITabBarController *tabBarController = [[UITabBarController alloc] init];
-        tabBarController.viewControllers = @[firstNavi, secondNavi];
+        tabBarController.viewControllers = @[firstNavi, secondNavi,thirdNavi];
         tabBarController.selectedIndex = 0;
         self.rootViewController = tabBarController;
         

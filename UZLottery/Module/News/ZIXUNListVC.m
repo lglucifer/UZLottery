@@ -54,6 +54,11 @@
             cell.titleLb.text = @"黑龙江时时彩";
             cell.titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
         }
+        else if (indexPath.row==2) {
+            cell.icon.image = [UIImage imageNamed:@"shishicaiicon"];
+            cell.titleLb.text = @"内蒙古时时彩";
+            cell.titleLb.textColor = [UIColor colorWithRGB:0x2a2a2a];
+        }
         else
         {
             cell.icon.image = [UIImage imageNamed:@"home_icon_20"];
@@ -92,7 +97,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section==0) {
-        return 3;
+        return 4;
     }
     else{
         return 1;
@@ -118,6 +123,14 @@
                 [self.navigationController pushViewController:dv animated:YES];
             
 
+        }
+        else if (indexPath.row==2) {
+            KaijiangViewController * dv = [[KaijiangViewController alloc] init];
+            dv.hidesBottomBarWhenPushed = YES;
+            dv.gamename = @"nmgssc";
+            [self.navigationController pushViewController:dv animated:YES];
+            
+            
         }
         else{
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示"

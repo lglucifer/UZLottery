@@ -27,6 +27,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要您同意才能保存图片</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

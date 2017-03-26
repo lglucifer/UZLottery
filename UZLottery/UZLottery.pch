@@ -54,7 +54,8 @@
 //---红球、篮球颜色
 #define kDisplayRedBallColor     [UIColor colorRGBWithRed:166.f green:0 blue:0 alpha:1.f]
 #define kDisplayBlueBallColor    [UIColor colorRGBWithRed:12.f green:52.f blue:174.f alpha:1.f]
-
+#define CurrentVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define CurrentAPPName [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey]
 
 //---- 投注号码的分隔符
 #define kBetNumbersSeparator1            @"+"

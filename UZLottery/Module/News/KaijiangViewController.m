@@ -11,11 +11,14 @@
 #import "UZSessionManager.h"
 #import "UZLotteryModel.h"
 #import "MBProgressHUD.h"
+#import "KaijiangTableViewCell.h"
 @interface KaijiangViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
 
 @property (nonatomic, copy) NSArray *items;
+
+@property (nonatomic)int num;
 
 @end
 
@@ -23,22 +26,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.num = 10;
     self.title = @"开奖信息";
     UITableView *tableView = [[UITableView alloc] init];
     tableView.delegate = self;
     tableView.dataSource = self;
-    tableView.rowHeight = 80.f;
+    tableView.rowHeight = 100.f;
     tableView.tableFooterView = [[UIView alloc] init];
-    [tableView registerClass:[UZLotteryNewsCell class] forCellReuseIdentifier:NSStringFromClass([UZLotteryNewsCell class])];
+    [tableView registerClass:[KaijiangTableViewCell class] forCellReuseIdentifier:NSStringFromClass([KaijiangTableViewCell class])];
     [self.view addSubview:tableView];
     tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
                                                            refreshingAction:@selector(inner_Refresh)];
+    
+    tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
+                                                               refreshingAction:@selector(inner_LoadMore)];
+    tableView.mj_footer.hidden = YES;
     self.tableView = tableView;
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view).insets(UIEdgeInsetsZero);
     }];
+    
+    [tableView.mj_header beginRefreshing];
 
-    [self inner_Refresh];
+//    [self inner_Refresh];
     
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -63,25 +73,47 @@
 
 - (void)inner_Refresh {
     __weak __typeof(self) weakSelf = self;
-    [MBProgressHUD showHUDAddedTo:self.view animated:NO];
-    [[UZSessionManager manager] requestShishicaiKaijiangWithName:self.gamename
+    _num = 10;
+//    [MBProgressHUD showHUDAddedTo:self.view animated:NO];
+    [[UZSessionManager manager] requestShishicaiKaijiangWithName:[NSString stringWithFormat:@"%@-%d",self.gamename,self.num]
                                                        Success:^(NSArray *news, NSURLSessionDataTask *dataTask) {
                                                            weakSelf.items = news;
                                                            [weakSelf.tableView.mj_header endRefreshing];
                                                            [weakSelf.tableView reloadData];
-                                                           [MBProgressHUD hideHUDForView:self.view animated:NO];
+                                                           weakSelf.num = weakSelf.num+10;
+                                                           weakSelf.tableView.mj_footer.hidden = NO;
+//                                                           [MBProgressHUD hideHUDForView:self.view animated:NO];
                                                        } failure:^(NSError *error, NSURLSessionDataTask *dataTask) {
                                                            [weakSelf.tableView.mj_header endRefreshing];
-                                                           [MBProgressHUD hideHUDForView:self.view animated:NO];
+//                                                           [MBProgressHUD hideHUDForView:self.view animated:NO];
                                                        }];
 }
 
+-(void)inner_LoadMore
+{
+    __weak __typeof(self) weakSelf = self;
+    [[UZSessionManager manager] requestShishicaiKaijiangWithName:[NSString stringWithFormat:@"%@-%d",self.gamename,self.num]
+                                                         Success:^(NSArray *news, NSURLSessionDataTask *dataTask) {
+                                                             weakSelf.items = news;
+                                                             [weakSelf.tableView.mj_header endRefreshing];
+                                                             [weakSelf.tableView.mj_footer endRefreshing];
+                                                             [weakSelf.tableView reloadData];
+                                                             weakSelf.num = weakSelf.num+10;
+                                                         } failure:^(NSError *error, NSURLSessionDataTask *dataTask) {
+                                                             [weakSelf.tableView.mj_footer endRefreshing];
+//                                                             [MBProgressHUD hideHUDForView:self.view animated:NO];
+                                                         }];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UZLotteryNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UZLotteryNewsCell class])];
+    KaijiangTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([KaijiangTableViewCell class])];
 //    cell.news = self.items[indexPath.row];
     UZLotteryKaijiang * d = self.items[indexPath.row];
-    cell.titleLb.text = [NSString stringWithFormat:@"第%@期 开奖号码%@",d.expect,d.opencode];
-    cell.dateLb.text = [NSString stringWithFormat:@"开奖时间%@",d.opentime];
+//    cell.titleLb.text = [NSString stringWithFormat:@"第%@期 开奖号码%@",d.expect,d.opencode];
+//    cell.dateLb.text = [NSString stringWithFormat:@"开奖时间%@",d.opentime];
+    cell.jiangStr = d.opencode;
+    cell.qiLabel.text = [NSString stringWithFormat:@"第%@期",d.expect];
+    cell.timeL.text = [NSString stringWithFormat:@"开奖时间%@",d.opentime];
     return cell;
 }
 

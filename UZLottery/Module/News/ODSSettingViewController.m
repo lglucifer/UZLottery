@@ -128,7 +128,7 @@
             versionV.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:versionV animated:YES];
         } else if (indexPath.row == 2) {
-            NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/us/app/shi-ci/id1084924739?l=zh&ls=1&mt=8"];
+            NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/cn/app/id1217113886"];
             if([[UIApplication sharedApplication] canOpenURL:url])
             {
                 [[UIApplication sharedApplication] openURL:url];

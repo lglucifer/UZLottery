@@ -12,7 +12,13 @@
 #import "DLTViewController.h"
 #import "KaijiangViewController.h"
 #import "Game11in5ViewController.h"
-#import "UZLotteryNewsVC.h"
+//#import "UZLotteryNewsVC.h"
+#import "WMPageController.h"
+#import "UZFSTZXViewController.h"
+#import "UZSECZXViewController.h"
+#import "UZTRDZXViewController.h"
+#import "UZFORZXViewController.h"
+
 @interface ZIXUNListVC ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
@@ -144,9 +150,21 @@
     else
     {
         if (indexPath.row==0) {
-            UZLotteryNewsVC * dv = [[UZLotteryNewsVC alloc] init];
-            dv.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:dv animated:YES];
+//            UZLotteryNewsVC * dv = [[UZLotteryNewsVC alloc] init];
+//            dv.hidesBottomBarWhenPushed = YES;
+//            [self.navigationController pushViewController:dv animated:YES];
+            WMPageController *pageVC = [[WMPageController alloc] initWithViewControllerClasses:@[[UZFSTZXViewController class], [UZSECZXViewController class], [UZTRDZXViewController class], [UZFORZXViewController class]] andTheirTitles:@[@"早间彩讯", @"中奖新闻", @"天选之子", @"彩民天地"]];
+            pageVC.menuItemWidth = 85;
+            pageVC.postNotification = YES;
+            pageVC.bounces = YES;
+            pageVC.preloadPolicy = WMPageControllerPreloadPolicyNever;
+            pageVC.menuViewStyle = WMMenuViewStyleDefault;
+            pageVC.titleSizeSelected = 20;
+            pageVC.titleSizeNormal = 15;
+            pageVC.titleColorSelected = [UIColor colorWithRGB:0xd81e06];
+            pageVC.titleColorNormal = [UIColor colorWithRGB:0xdbdbdb];
+            pageVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:pageVC animated:YES];
         }
         else
         {

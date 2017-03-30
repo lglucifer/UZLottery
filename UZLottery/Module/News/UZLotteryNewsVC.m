@@ -7,19 +7,8 @@
 //
 
 #import "UZLotteryNewsVC.h"
-#import "UZLotteryDetailVC.h"
-#import "UZLotteryNewsCell.h"
-#import "UZSessionManager.h"
-#import "ZixunContent.h"
-#import "NSDate+YYAdd.h"
 
 @interface UZLotteryNewsVC ()<UITableViewDelegate, UITableViewDataSource>
-
-@property (nonatomic, weak) UITableView *tableView;
-
-@property (nonatomic, copy) NSArray *items;
-
-@property (nonatomic, assign) NSInteger pageIndex;
 
 @end
 

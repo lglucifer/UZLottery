@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E5F05881E8CD2AA002C0E91 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F057F1E8CD2AA002C0E91 /* WMMenuItem.m */; };
+		2E5F05891E8CD2AA002C0E91 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F05811E8CD2AA002C0E91 /* WMMenuView.m */; };
+		2E5F058A1E8CD2AA002C0E91 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F05831E8CD2AA002C0E91 /* WMProgressView.m */; };
+		2E5F058B1E8CD2AA002C0E91 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F05851E8CD2AA002C0E91 /* WMScrollView.m */; };
+		2E5F058C1E8CD2AA002C0E91 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F05871E8CD2AA002C0E91 /* WMPageController.m */; };
+		2E5F05921E8CD538002C0E91 /* UZFSTZXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F05911E8CD538002C0E91 /* UZFSTZXViewController.m */; };
+		2E5F05951E8CD543002C0E91 /* UZSECZXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F05941E8CD543002C0E91 /* UZSECZXViewController.m */; };
+		2E5F05981E8CD54F002C0E91 /* UZTRDZXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F05971E8CD54F002C0E91 /* UZTRDZXViewController.m */; };
+		2E5F059B1E8CD55A002C0E91 /* UZFORZXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F059A1E8CD55A002C0E91 /* UZFORZXViewController.m */; };
 		2E648ADC1E7A31EE00E1308C /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E648ADB1E7A31EE00E1308C /* UIImage+Scale.m */; };
 		2E648AE21E7A39A100E1308C /* UZLotteryAppLaunchMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E648AE11E7A39A100E1308C /* UZLotteryAppLaunchMediaCell.m */; };
 		2EDB79C01E7632020068F544 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDB79BF1E7632020068F544 /* main.m */; };
@@ -225,6 +234,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E5F057E1E8CD2AA002C0E91 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
+		2E5F057F1E8CD2AA002C0E91 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
+		2E5F05801E8CD2AA002C0E91 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
+		2E5F05811E8CD2AA002C0E91 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
+		2E5F05821E8CD2AA002C0E91 /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
+		2E5F05831E8CD2AA002C0E91 /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
+		2E5F05841E8CD2AA002C0E91 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
+		2E5F05851E8CD2AA002C0E91 /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
+		2E5F05861E8CD2AA002C0E91 /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
+		2E5F05871E8CD2AA002C0E91 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
+		2E5F05901E8CD538002C0E91 /* UZFSTZXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZFSTZXViewController.h; sourceTree = "<group>"; };
+		2E5F05911E8CD538002C0E91 /* UZFSTZXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZFSTZXViewController.m; sourceTree = "<group>"; };
+		2E5F05931E8CD543002C0E91 /* UZSECZXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZSECZXViewController.h; sourceTree = "<group>"; };
+		2E5F05941E8CD543002C0E91 /* UZSECZXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZSECZXViewController.m; sourceTree = "<group>"; };
+		2E5F05961E8CD54F002C0E91 /* UZTRDZXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZTRDZXViewController.h; sourceTree = "<group>"; };
+		2E5F05971E8CD54F002C0E91 /* UZTRDZXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZTRDZXViewController.m; sourceTree = "<group>"; };
+		2E5F05991E8CD55A002C0E91 /* UZFORZXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZFORZXViewController.h; sourceTree = "<group>"; };
+		2E5F059A1E8CD55A002C0E91 /* UZFORZXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UZFORZXViewController.m; sourceTree = "<group>"; };
 		2E648ADA1E7A31EE00E1308C /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
 		2E648ADB1E7A31EE00E1308C /* UIImage+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 		2E648AE01E7A39A100E1308C /* UZLotteryAppLaunchMediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZLotteryAppLaunchMediaCell.h; sourceTree = "<group>"; };
@@ -672,6 +699,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E5F057B1E8CD288002C0E91 /* ZiXun */ = {
+			isa = PBXGroup;
+			children = (
+				2E5F05901E8CD538002C0E91 /* UZFSTZXViewController.h */,
+				2E5F05911E8CD538002C0E91 /* UZFSTZXViewController.m */,
+				2E5F05931E8CD543002C0E91 /* UZSECZXViewController.h */,
+				2E5F05941E8CD543002C0E91 /* UZSECZXViewController.m */,
+				2E5F05961E8CD54F002C0E91 /* UZTRDZXViewController.h */,
+				2E5F05971E8CD54F002C0E91 /* UZTRDZXViewController.m */,
+				2E5F05991E8CD55A002C0E91 /* UZFORZXViewController.h */,
+				2E5F059A1E8CD55A002C0E91 /* UZFORZXViewController.m */,
+			);
+			path = ZiXun;
+			sourceTree = "<group>";
+		};
+		2E5F057C1E8CD2AA002C0E91 /* WMPageController */ = {
+			isa = PBXGroup;
+			children = (
+				2E5F057D1E8CD2AA002C0E91 /* WMMenuView */,
+				2E5F05861E8CD2AA002C0E91 /* WMPageController.h */,
+				2E5F05871E8CD2AA002C0E91 /* WMPageController.m */,
+			);
+			path = WMPageController;
+			sourceTree = "<group>";
+		};
+		2E5F057D1E8CD2AA002C0E91 /* WMMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				2E5F057E1E8CD2AA002C0E91 /* WMMenuItem.h */,
+				2E5F057F1E8CD2AA002C0E91 /* WMMenuItem.m */,
+				2E5F05801E8CD2AA002C0E91 /* WMMenuView.h */,
+				2E5F05811E8CD2AA002C0E91 /* WMMenuView.m */,
+				2E5F05821E8CD2AA002C0E91 /* WMProgressView.h */,
+				2E5F05831E8CD2AA002C0E91 /* WMProgressView.m */,
+				2E5F05841E8CD2AA002C0E91 /* WMScrollView.h */,
+				2E5F05851E8CD2AA002C0E91 /* WMScrollView.m */,
+			);
+			path = WMMenuView;
+			sourceTree = "<group>";
+		};
 		2EDB79B21E7632010068F544 = {
 			isa = PBXGroup;
 			children = (
@@ -769,6 +836,7 @@
 		2EDB79F51E76344C0068F544 /* ThirdSource */ = {
 			isa = PBXGroup;
 			children = (
+				2E5F057C1E8CD2AA002C0E91 /* WMPageController */,
 				973C61201E7BFD0100C909EA /* GtSdkLib */,
 				973C61181E7BA3F300C909EA /* UMMobClick.framework */,
 				2EDB79F61E76344C0068F544 /* AFNetworking */,
@@ -1126,6 +1194,7 @@
 		2EDB7B0F1E7634A00068F544 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				2E5F057B1E8CD288002C0E91 /* ZiXun */,
 				D82EA7D41E835EAF00A7603D /* 11in5ViewController */,
 				2E648AE01E7A39A100E1308C /* UZLotteryAppLaunchMediaCell.h */,
 				2E648AE11E7A39A100E1308C /* UZLotteryAppLaunchMediaCell.m */,
@@ -1602,6 +1671,7 @@
 				2EDB7AF51E76344C0068F544 /* SDWebImageCompat.m in Sources */,
 				2EDB7AF61E76344C0068F544 /* SDWebImageDecoder.m in Sources */,
 				D82EA84D1E83634700A7603D /* NSAttributeDescription+MagicalDataImport.m in Sources */,
+				2E5F05951E8CD543002C0E91 /* UZSECZXViewController.m in Sources */,
 				2EFFC9471E78E5B80010FD7D /* UZLotteryMediaView.m in Sources */,
 				2EDB79C31E7632020068F544 /* AppDelegate.m in Sources */,
 				2EDB7ADE1E76344C0068F544 /* MJRefreshComponent.m in Sources */,
@@ -1610,6 +1680,7 @@
 				2EDB7AFD1E76344C0068F544 /* UIImage+MultiFormat.m in Sources */,
 				2EDB7ADF1E76344C0068F544 /* MJRefreshFooter.m in Sources */,
 				2EDB7AC61E76344C0068F544 /* UIProgressView+AFNetworking.m in Sources */,
+				2E5F05921E8CD538002C0E91 /* UZFSTZXViewController.m in Sources */,
 				D82EA8BA1E83708100A7603D /* APPFaceSharingView.m in Sources */,
 				973C60A81E7A0EE000C909EA /* DLTViewController.m in Sources */,
 				978A9A031E87B39700EFEFAA /* SGProgressView.m in Sources */,
@@ -1622,6 +1693,7 @@
 				973C61051E7A1D2800C909EA /* BallSizeConfig.m in Sources */,
 				2EFFC9441E78DFA60010FD7D /* NSObject+HUD.m in Sources */,
 				2EDB7B1F1E763A1B0068F544 /* UZLotteryRedirectVC.m in Sources */,
+				2E5F059B1E8CD55A002C0E91 /* UZFORZXViewController.m in Sources */,
 				973C61091E7A1D2800C909EA /* DLTNumbersTableView.m in Sources */,
 				2EDB7AE41E76344C0068F544 /* MJRefreshBackGifFooter.m in Sources */,
 				2EDB7AF81E76344C0068F544 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1638,6 +1710,7 @@
 				2EDB7ADC1E76344C0068F544 /* MJRefreshAutoFooter.m in Sources */,
 				2EDB7ADD1E76344C0068F544 /* MJRefreshBackFooter.m in Sources */,
 				2EDB7AE01E76344C0068F544 /* MJRefreshHeader.m in Sources */,
+				2E5F05881E8CD2AA002C0E91 /* WMMenuItem.m in Sources */,
 				D82EA8A11E8368E200A7603D /* split.c in Sources */,
 				D82EA8641E83634700A7603D /* MagicalRecord+ShorthandSupport.m in Sources */,
 				2EDB7AFB1E76344C0068F544 /* UIButton+WebCache.m in Sources */,
@@ -1666,6 +1739,7 @@
 				D82EA89D1E8368E200A7603D /* qrencode.c in Sources */,
 				2EDB7AE81E76344C0068F544 /* MJRefreshNormalHeader.m in Sources */,
 				D82EA8BD1E83766700A7603D /* ZIXUNListVC.m in Sources */,
+				2E5F058B1E8CD2AA002C0E91 /* WMScrollView.m in Sources */,
 				D82EA8A01E8368E200A7603D /* rscode.c in Sources */,
 				2EDB7AC31E76344C0068F544 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				2EDB7AF21E76344C0068F544 /* NSImage+WebCache.m in Sources */,
@@ -1695,6 +1769,7 @@
 				2EDB7AD21E76344C0068F544 /* MASConstraint.m in Sources */,
 				D82EA8611E83634700A7603D /* MagicalRecord+iCloud.m in Sources */,
 				2EDB7AD31E76344C0068F544 /* MASConstraintMaker.m in Sources */,
+				2E5F05981E8CD54F002C0E91 /* UZTRDZXViewController.m in Sources */,
 				2EDB7B001E76344C0068F544 /* UIImageView+WebCache.m in Sources */,
 				2EDB7B1B1E7638670068F544 /* UZLotteryNewsCell.m in Sources */,
 				D82EA89B1E8368E200A7603D /* bitstream.c in Sources */,
@@ -1721,12 +1796,14 @@
 				D82EA7F11E835FEE00A7603D /* BetFooterView.m in Sources */,
 				2EFFC9381E78D4540010FD7D /* UZLotteryXuanhaoCell.m in Sources */,
 				D82EA8591E83634700A7603D /* NSManagedObjectContext+MagicalRecord.m in Sources */,
+				2E5F058C1E8CD2AA002C0E91 /* WMPageController.m in Sources */,
 				973C610F1E7A1D2800C909EA /* NavTitleButton.m in Sources */,
 				2EDB7AE21E76344C0068F544 /* MJRefreshAutoNormalFooter.m in Sources */,
 				2E648ADC1E7A31EE00E1308C /* UIImage+Scale.m in Sources */,
 				2EDB7AC91E76344C0068F544 /* JSONModel.m in Sources */,
 				973C61111E7A1D2800C909EA /* RandomBetNubmer.m in Sources */,
 				2EDB7AF31E76344C0068F544 /* SDImageCache.m in Sources */,
+				2E5F058A1E8CD2AA002C0E91 /* WMProgressView.m in Sources */,
 				973C61061E7A1D2800C909EA /* BetFooterButtonView.m in Sources */,
 				D82EA8621E83634700A7603D /* MagicalRecord+Options.m in Sources */,
 				D82EA7F51E835FEE00A7603D /* GP11in5GameTypeView.m in Sources */,
@@ -1734,6 +1811,7 @@
 				2EDB7ADB1E76344C0068F544 /* MBProgressHUD.m in Sources */,
 				2EDB7AD71E76344C0068F544 /* NSArray+MASAdditions.m in Sources */,
 				2EDB7AF41E76344C0068F544 /* SDImageCacheConfig.m in Sources */,
+				2E5F05891E8CD2AA002C0E91 /* WMMenuView.m in Sources */,
 				D82EA89C1E8368E200A7603D /* mask.c in Sources */,
 				973C61171E7B926E00C909EA /* KaijiangViewController.m in Sources */,
 				978A9A041E87B39700EFEFAA /* UINavigationController+SGProgress.m in Sources */,

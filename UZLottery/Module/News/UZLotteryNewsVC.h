@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UZLotteryDetailVC.h"
+#import "UZLotteryNewsCell.h"
+#import "UZSessionManager.h"
+#import "ZixunContent.h"
+#import "NSDate+YYAdd.h"
 
 typedef NS_ENUM(NSUInteger, UZLotteryNewsType) {
     UZLotteryNewsType_Page1 = (0),
@@ -16,5 +21,11 @@ typedef NS_ENUM(NSUInteger, UZLotteryNewsType) {
 @interface UZLotteryNewsVC : UIViewController
 
 @property (nonatomic, assign) UZLotteryNewsType pageType;
+
+@property (nonatomic, weak) UITableView *tableView;
+
+@property (nonatomic, copy) NSArray *items;
+
+@property (nonatomic, assign) NSInteger pageIndex;
 
 @end

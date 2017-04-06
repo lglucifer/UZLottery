@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
+    <entity name="MyBetInfo" representedClassName="MyBetInfo" syncable="YES">
+        <attribute name="additionId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="draw" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mutiple" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalBet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalMoney" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MyTicketInfo" representedClassName="MyTicketInfo" syncable="YES">
+        <attribute name="bet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="betDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="betType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupIdx" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDirect" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="money" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pickMethod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TicketInfo" representedClassName="TicketInfo" syncable="YES">
+        <attribute name="bet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="betDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="betType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="displayDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupIdx" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idx" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="isDirect" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="money" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pickMethod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MyBetInfo" positionX="-54" positionY="-9" width="128" height="210"/>
+        <element name="MyTicketInfo" positionX="-36" positionY="9" width="128" height="270"/>
+        <element name="TicketInfo" positionX="-18" positionY="27" width="128" height="240"/>
+    </elements>
+</model>

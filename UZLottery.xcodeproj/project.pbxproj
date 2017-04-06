@@ -214,6 +214,15 @@
 		D82EA8CA1E83928400A7603D /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = D82EA8C41E83928400A7603D /* GTMBase64.m */; };
 		D82EA8CB1E83928400A7603D /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D82EA8C71E83928400A7603D /* NSData+Base64.m */; };
 		D859B1F01E80EB1D0088BE9D /* ZixunContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D859B1EF1E80EB1D0088BE9D /* ZixunContent.m */; };
+		D8C657081E95D2A9001BE06A /* DLTBetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C657071E95D2A9001BE06A /* DLTBetListViewController.m */; };
+		D8C657101E95D5B7001BE06A /* GameDBModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = D8C6570F1E95D5B7001BE06A /* GameDBModel.xcdatamodel */; };
+		D8C6571D1E95D5C9001BE06A /* MyBetInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C657121E95D5C9001BE06A /* MyBetInfo+CoreDataProperties.m */; };
+		D8C6571E1E95D5C9001BE06A /* MyBetInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C657141E95D5C9001BE06A /* MyBetInfo.m */; };
+		D8C6571F1E95D5C9001BE06A /* MyTicketInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C657161E95D5C9001BE06A /* MyTicketInfo+CoreDataProperties.m */; };
+		D8C657201E95D5C9001BE06A /* MyTicketInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C657181E95D5C9001BE06A /* MyTicketInfo.m */; };
+		D8C657211E95D5C9001BE06A /* TicketInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C6571A1E95D5C9001BE06A /* TicketInfo+CoreDataProperties.m */; };
+		D8C657221E95D5C9001BE06A /* TicketInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C6571C1E95D5C9001BE06A /* TicketInfo.m */; };
+		D8C657251E95DC29001BE06A /* BetContentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C657241E95DC29001BE06A /* BetContentListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -657,6 +666,23 @@
 		D82EA8C71E83928400A7603D /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		D859B1EE1E80EB1D0088BE9D /* ZixunContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZixunContent.h; sourceTree = "<group>"; };
 		D859B1EF1E80EB1D0088BE9D /* ZixunContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZixunContent.m; sourceTree = "<group>"; };
+		D8C657061E95D2A9001BE06A /* DLTBetListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTBetListViewController.h; sourceTree = "<group>"; };
+		D8C657071E95D2A9001BE06A /* DLTBetListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTBetListViewController.m; sourceTree = "<group>"; };
+		D8C6570F1E95D5B7001BE06A /* GameDBModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameDBModel.xcdatamodel; sourceTree = "<group>"; };
+		D8C657111E95D5C9001BE06A /* MyBetInfo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyBetInfo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		D8C657121E95D5C9001BE06A /* MyBetInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyBetInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		D8C657131E95D5C9001BE06A /* MyBetInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBetInfo.h; sourceTree = "<group>"; };
+		D8C657141E95D5C9001BE06A /* MyBetInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBetInfo.m; sourceTree = "<group>"; };
+		D8C657151E95D5C9001BE06A /* MyTicketInfo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyTicketInfo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		D8C657161E95D5C9001BE06A /* MyTicketInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyTicketInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		D8C657171E95D5C9001BE06A /* MyTicketInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTicketInfo.h; sourceTree = "<group>"; };
+		D8C657181E95D5C9001BE06A /* MyTicketInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTicketInfo.m; sourceTree = "<group>"; };
+		D8C657191E95D5C9001BE06A /* TicketInfo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TicketInfo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		D8C6571A1E95D5C9001BE06A /* TicketInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TicketInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		D8C6571B1E95D5C9001BE06A /* TicketInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketInfo.h; sourceTree = "<group>"; };
+		D8C6571C1E95D5C9001BE06A /* TicketInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketInfo.m; sourceTree = "<group>"; };
+		D8C657231E95DC29001BE06A /* BetContentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetContentListViewController.h; sourceTree = "<group>"; };
+		D8C657241E95DC29001BE06A /* BetContentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetContentListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1177,6 +1203,19 @@
 		2EDB7B0E1E7634A00068F544 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				D8C6570F1E95D5B7001BE06A /* GameDBModel.xcdatamodel */,
+				D8C657111E95D5C9001BE06A /* MyBetInfo+CoreDataProperties.h */,
+				D8C657121E95D5C9001BE06A /* MyBetInfo+CoreDataProperties.m */,
+				D8C657131E95D5C9001BE06A /* MyBetInfo.h */,
+				D8C657141E95D5C9001BE06A /* MyBetInfo.m */,
+				D8C657151E95D5C9001BE06A /* MyTicketInfo+CoreDataProperties.h */,
+				D8C657161E95D5C9001BE06A /* MyTicketInfo+CoreDataProperties.m */,
+				D8C657171E95D5C9001BE06A /* MyTicketInfo.h */,
+				D8C657181E95D5C9001BE06A /* MyTicketInfo.m */,
+				D8C657191E95D5C9001BE06A /* TicketInfo+CoreDataProperties.h */,
+				D8C6571A1E95D5C9001BE06A /* TicketInfo+CoreDataProperties.m */,
+				D8C6571B1E95D5C9001BE06A /* TicketInfo.h */,
+				D8C6571C1E95D5C9001BE06A /* TicketInfo.m */,
 				2E648ADA1E7A31EE00E1308C /* UIImage+Scale.h */,
 				2E648ADB1E7A31EE00E1308C /* UIImage+Scale.m */,
 				2EFFC93F1E78DFA60010FD7D /* MBProgressHUD+CustomView.h */,
@@ -1223,6 +1262,10 @@
 				973C61161E7B926E00C909EA /* KaijiangViewController.m */,
 				978A99F31E87A83500EFEFAA /* KaijiangTableViewCell.h */,
 				978A99F41E87A83500EFEFAA /* KaijiangTableViewCell.m */,
+				D8C657231E95DC29001BE06A /* BetContentListViewController.h */,
+				D8C657241E95DC29001BE06A /* BetContentListViewController.m */,
+				D8C657061E95D2A9001BE06A /* DLTBetListViewController.h */,
+				D8C657071E95D2A9001BE06A /* DLTBetListViewController.m */,
 				978A99FF1E87B39700EFEFAA /* SGProgressView.h */,
 				978A9A001E87B39700EFEFAA /* SGProgressView.m */,
 				978A9A011E87B39700EFEFAA /* UINavigationController+SGProgress.h */,
@@ -1686,6 +1729,7 @@
 				978A9A031E87B39700EFEFAA /* SGProgressView.m in Sources */,
 				D82EA8881E83686700A7603D /* BetQRCodeView.m in Sources */,
 				2EDB7AF11E76344C0068F544 /* NSData+ImageContentType.m in Sources */,
+				D8C657251E95DC29001BE06A /* BetContentListViewController.m in Sources */,
 				D82EA8501E83634700A7603D /* NSObject+MagicalDataImport.m in Sources */,
 				2EFFC93E1E78DDCA0010FD7D /* UZLotteryAppLaunchVC.m in Sources */,
 				2EDB7B071E76344C0068F544 /* NSNumber+YYAdd.m in Sources */,
@@ -1704,6 +1748,7 @@
 				2EDB7B151E7635430068F544 /* UZLotteryNewsVC.m in Sources */,
 				2EDB7ACB1E76344C0068F544 /* JSONModelError.m in Sources */,
 				2EDB7B221E763C970068F544 /* UZLotteryModel.m in Sources */,
+				D8C657081E95D2A9001BE06A /* DLTBetListViewController.m in Sources */,
 				2EDB7AE51E76344C0068F544 /* MJRefreshBackNormalFooter.m in Sources */,
 				2EDB7ADA1E76344C0068F544 /* ViewController+MASAdditions.m in Sources */,
 				2EDB7AD81E76344C0068F544 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -1733,6 +1778,7 @@
 				2E648AE21E7A39A100E1308C /* UZLotteryAppLaunchMediaCell.m in Sources */,
 				2EFFC93B1E78D58E0010FD7D /* UZLotteryXuanhaoDetailVC.m in Sources */,
 				2EDB7B021E76344C0068F544 /* UIView+WebCacheOperation.m in Sources */,
+				D8C657221E95D5C9001BE06A /* TicketInfo.m in Sources */,
 				D82EA8571E83634700A7603D /* NSManagedObject+MagicalRequests.m in Sources */,
 				2EDB7B031E76344C0068F544 /* NSData+YYAdd.m in Sources */,
 				2EDB7ABD1E76344C0068F544 /* AFURLRequestSerialization.m in Sources */,
@@ -1775,10 +1821,12 @@
 				D82EA89B1E8368E200A7603D /* bitstream.c in Sources */,
 				D82EA8511E83634700A7603D /* NSRelationshipDescription+MagicalDataImport.m in Sources */,
 				2EDB7AE61E76344C0068F544 /* MJRefreshBackStateFooter.m in Sources */,
+				D8C657101E95D5B7001BE06A /* GameDBModel.xcdatamodel in Sources */,
 				2EDB7AEB1E76344C0068F544 /* MJRefreshConst.m in Sources */,
 				2EDB7AFC1E76344C0068F544 /* UIImage+GIF.m in Sources */,
 				2EDB7B011E76344C0068F544 /* UIView+WebCache.m in Sources */,
 				D82EA8A81E83698600A7603D /* UIImage+Additions.m in Sources */,
+				D8C6571E1E95D5C9001BE06A /* MyBetInfo.m in Sources */,
 				978A9A071E87B8EE00EFEFAA /* ShareSheet.m in Sources */,
 				D82EA8A21E8368E200A7603D /* QRCodeGenerator.mm in Sources */,
 				D82EA8C81E83928400A7603D /* AES128Wrapper.m in Sources */,
@@ -1790,6 +1838,7 @@
 				D82EA8651E83634700A7603D /* MagicalRecord.m in Sources */,
 				2EDB7ABE1E76344C0068F544 /* AFURLResponseSerialization.m in Sources */,
 				2EDB7AD61E76344C0068F544 /* MASViewConstraint.m in Sources */,
+				D8C6571D1E95D5C9001BE06A /* MyBetInfo+CoreDataProperties.m in Sources */,
 				978A99FE1E87B2A600EFEFAA /* ODSVersionViewController.m in Sources */,
 				D82EA8541E83634700A7603D /* NSManagedObject+MagicalDataImport.m in Sources */,
 				2EDB7AED1E76344C0068F544 /* UIScrollView+MJExtension.m in Sources */,
@@ -1810,8 +1859,10 @@
 				2EDB7AF91E76344C0068F544 /* SDWebImageManager.m in Sources */,
 				2EDB7ADB1E76344C0068F544 /* MBProgressHUD.m in Sources */,
 				2EDB7AD71E76344C0068F544 /* NSArray+MASAdditions.m in Sources */,
+				D8C657211E95D5C9001BE06A /* TicketInfo+CoreDataProperties.m in Sources */,
 				2EDB7AF41E76344C0068F544 /* SDImageCacheConfig.m in Sources */,
 				2E5F05891E8CD2AA002C0E91 /* WMMenuView.m in Sources */,
+				D8C6571F1E95D5C9001BE06A /* MyTicketInfo+CoreDataProperties.m in Sources */,
 				D82EA89C1E8368E200A7603D /* mask.c in Sources */,
 				973C61171E7B926E00C909EA /* KaijiangViewController.m in Sources */,
 				978A9A041E87B39700EFEFAA /* UINavigationController+SGProgress.m in Sources */,
@@ -1829,6 +1880,7 @@
 				2EDB7AC41E76344C0068F544 /* UIButton+AFNetworking.m in Sources */,
 				2EDB7AFA1E76344C0068F544 /* SDWebImagePrefetcher.m in Sources */,
 				2EDB7AFE1E76344C0068F544 /* UIImage+WebP.m in Sources */,
+				D8C657201E95D5C9001BE06A /* MyTicketInfo.m in Sources */,
 				2EDB7ACD1E76344C0068F544 /* JSONHTTPClient.m in Sources */,
 				D82EA8011E83617700A7603D /* GP11in5Description.m in Sources */,
 				2EDB79C01E7632020068F544 /* main.m in Sources */,

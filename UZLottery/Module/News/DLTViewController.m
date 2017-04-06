@@ -7,7 +7,7 @@
 //
 
 #import "DLTViewController.h"
-//#import "DLTBetListViewController.h"
+#import "DLTBetListViewController.h"
 
 #import "DLTNumbersTableView.h"
 #import "GameBetHeaderView.h"
@@ -19,7 +19,7 @@
 
 #import "NavTitleButton.h"
 #import "APPFaceSharingView.h"
-//#import "TicketInfo.h"
+#import "TicketInfo.h"
 #import "GTMBase64.h"
 #define DisplayBetInfo(B, M)  [NSString stringWithFormat:@"共%@注 %@元", B, M]
 
@@ -43,7 +43,7 @@
 @property (nonatomic, strong) GameBetFooterView *footerView;
 @property (nonatomic, strong) PreviewNumbersView *previewNumView;
 //
-//@property (nonatomic, strong) DLTBetListViewController *contentListController;
+@property (nonatomic, strong) DLTBetListViewController *contentListController;
 
 @property (nonatomic, strong) NSArray  *frontDataArr1;
 @property (nonatomic, strong) NSArray  *frontDataArr2;
@@ -98,17 +98,17 @@
         
     }
     if (_isHomePush == NO) {
-//        self.backBarButton = nil;
-//        
-//        UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        backButton.frame = CGRectMake(0, 0, 54.f, 40.f);
-//        backButton.backgroundColor = [UIColor clearColor];
-//        [backButton setTitle:@"取消" forState:UIControlStateNormal];
-//        [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//        backButton.titleLabel.font = [UIFont systemFontOfSize:17.f];
-//        [backButton addTarget:self action:@selector(backButtonItemAction) forControlEvents:UIControlEventTouchUpInside];
-//        UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
-//        self.navigationItem.leftBarButtonItem = backBarButtonItem;
+       
+        
+        UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        backButton.frame = CGRectMake(0, 0, 54.f, 40.f);
+        backButton.backgroundColor = [UIColor clearColor];
+        [backButton setTitle:@"取消" forState:UIControlStateNormal];
+        [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        backButton.titleLabel.font = [UIFont systemFontOfSize:17.f];
+        [backButton addTarget:self action:@selector(backButtonItemAction) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+        self.navigationItem.leftBarButtonItem = backBarButtonItem;
     }
     
     
@@ -225,7 +225,7 @@
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
     
-//    _contentListController = nil;
+    _contentListController = nil;
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -270,13 +270,13 @@
 
 - (void)delAllTicketInfoData
 {
-//    NSArray *arr = [TicketInfo MR_findAll];
-//    if ([arr count] > 0) {
-//        for (TicketInfo *ti in arr) {
-//            [ti MR_deleteEntity];
-//            [[ti managedObjectContext] MR_saveToPersistentStoreAndWait];
-//        }
-//    }
+    NSArray *arr = [TicketInfo MR_findAll];
+    if ([arr count] > 0) {
+        for (TicketInfo *ti in arr) {
+            [ti MR_deleteEntity];
+            [[ti managedObjectContext] MR_saveToPersistentStoreAndWait];
+        }
+    }
 }
 
 #pragma mark - 大乐透投注方式选择
@@ -597,71 +597,71 @@
 #pragma mark - 保存/更新号码并跳转到投注确认界面
 - (void)myTicketDisplayNumber:(NSString *)displayNum betNumber:(NSString *)betNum subType:(NSString *)subType pickMethod:(NSInteger)picketMethod betType:(NSInteger)betType
 {
-//    if ([_updateNumbers length] > 0) {
-//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"displayDetail=%@ AND idx=%@", _updateNumbers, _ticketInfoIdx];
-//        NSArray *findAllArr = [TicketInfo MR_findAllWithPredicate:predicate];
-//        if ([findAllArr count] > 0) {
-//            TicketInfo *ticket = [findAllArr lastObject];
-//            ticket.idx = _ticketInfoIdx;
-//            ticket.displayDetail = displayNum;
-//            ticket.betDetail = betNum;
-//            ticket.pickMethod = [NSString stringWithFormat:@"%@", @(picketMethod)];
-//            ticket.betType = [NSString stringWithFormat:@"%@", @(betType)];
-//            ticket.isDirect = @"0";
-//            ticket.region = @"2";
-//            ticket.groupIdx = @"0";
-//            ticket.gameType = @"大乐透";
-//            ticket.bet = [NSString stringWithFormat:@"%@", @(_betCnt)];
-//            ticket.money = [NSString stringWithFormat:@"%@",@(_betCnt * 2)];
-//            ticket.subType = subType;
-//            ticket.createTime = [NSDate date];
-//            [[ticket managedObjectContext] MR_saveToPersistentStoreAndWait];
-//        }
-//    }else{
-//        NSArray *allTicket = [TicketInfo MR_findAll];
-//        NSInteger allCount = [allTicket count];
-//        
-//        TicketInfo *ticket = [TicketInfo MR_createEntity];
-//        ticket.idx = @(allCount + 1);
-//        ticket.displayDetail = displayNum;
-//        ticket.betDetail = betNum;
-//        ticket.pickMethod = [NSString stringWithFormat:@"%@", @(picketMethod)];
-//        ticket.betType = [NSString stringWithFormat:@"%@", @(betType)];
-//        ticket.isDirect = @"0";
-//        ticket.region = @"2";
-//        ticket.groupIdx = @"0";
-//        ticket.gameType = @"大乐透";
-//        ticket.bet = [NSString stringWithFormat:@"%@", @(_betCnt)];
-//        ticket.money = [NSString stringWithFormat:@"%@",@(_betCnt * 2)];
-//        ticket.subType = subType;
-//        ticket.createTime = [NSDate date];
-//        [[ticket managedObjectContext] MR_saveToPersistentStoreAndWait];
-//    }
-//
-//    if (_contentListController == nil) {
-//        _contentListController = [[DLTBetListViewController alloc] init];
-//        _contentListController.gameNo = _gameNo;
-//        _contentListController.gameName = _gameName;
-//        if (_isHomePush) {
-//            [self.navigationController pushViewController:_contentListController animated:YES];
-//        }else{
-//            [self dismissViewControllerAnimated:YES completion:nil];
-//        }
-//    }
+    if ([_updateNumbers length] > 0) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"displayDetail=%@ AND idx=%@", _updateNumbers, _ticketInfoIdx];
+        NSArray *findAllArr = [TicketInfo MR_findAllWithPredicate:predicate];
+        if ([findAllArr count] > 0) {
+            TicketInfo *ticket = [findAllArr lastObject];
+            ticket.idx = _ticketInfoIdx;
+            ticket.displayDetail = displayNum;
+            ticket.betDetail = betNum;
+            ticket.pickMethod = [NSString stringWithFormat:@"%@", @(picketMethod)];
+            ticket.betType = [NSString stringWithFormat:@"%@", @(betType)];
+            ticket.isDirect = @"0";
+            ticket.region = @"2";
+            ticket.groupIdx = @"0";
+            ticket.gameType = @"大乐透";
+            ticket.bet = [NSString stringWithFormat:@"%@", @(_betCnt)];
+            ticket.money = [NSString stringWithFormat:@"%@",@(_betCnt * 2)];
+            ticket.subType = subType;
+            ticket.createTime = [NSDate date];
+            [[ticket managedObjectContext] MR_saveToPersistentStoreAndWait];
+        }
+    }else{
+        NSArray *allTicket = [TicketInfo MR_findAll];
+        NSInteger allCount = [allTicket count];
+        
+        TicketInfo *ticket = [TicketInfo MR_createEntity];
+        ticket.idx = @(allCount + 1);
+        ticket.displayDetail = displayNum;
+        ticket.betDetail = betNum;
+        ticket.pickMethod = [NSString stringWithFormat:@"%@", @(picketMethod)];
+        ticket.betType = [NSString stringWithFormat:@"%@", @(betType)];
+        ticket.isDirect = @"0";
+        ticket.region = @"2";
+        ticket.groupIdx = @"0";
+        ticket.gameType = @"大乐透";
+        ticket.bet = [NSString stringWithFormat:@"%@", @(_betCnt)];
+        ticket.money = [NSString stringWithFormat:@"%@",@(_betCnt * 2)];
+        ticket.subType = subType;
+        ticket.createTime = [NSDate date];
+        [[ticket managedObjectContext] MR_saveToPersistentStoreAndWait];
+    }
+
+    if (_contentListController == nil) {
+        _contentListController = [[DLTBetListViewController alloc] init];
+        _contentListController.gameNo = _gameNo;
+        _contentListController.gameName = _gameName;
+        if (_isHomePush) {
+            [self.navigationController pushViewController:_contentListController animated:YES];
+        }else{
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }
     
-    NSString * n = get_random_uuid();
-    
-    NSData *nsdata = [n
-                      dataUsingEncoding:NSUTF8StringEncoding];
-    
-    // Get NSString from NSData object in Base64
-    NSString *base64Encoded = [nsdata base64EncodedStringWithOptions:0];
-    
-    
-    
-    APPFaceSharingView *share = [[APPFaceSharingView alloc] initWithTitle:@"请到附近彩票店投注" qrcodeImage:nil qrcodeImageStr:base64Encoded Desc:nil];
-    
-    [share show];
+//    NSString * n = get_random_uuid();
+//    
+//    NSData *nsdata = [n
+//                      dataUsingEncoding:NSUTF8StringEncoding];
+//    
+//    // Get NSString from NSData object in Base64
+//    NSString *base64Encoded = [nsdata base64EncodedStringWithOptions:0];
+//    
+//    
+//    
+//    APPFaceSharingView *share = [[APPFaceSharingView alloc] initWithTitle:@"请到附近彩票店投注" qrcodeImage:nil qrcodeImageStr:base64Encoded Desc:nil];
+//    
+//    [share show];
 }
 
 #pragma mark - 号码验证

@@ -78,6 +78,7 @@
 
         if (indexPath.row==0) {
             DLTViewController * dv = [[DLTViewController alloc] init];
+            dv.isHomePush = YES;
             dv.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:dv animated:YES];
         }
@@ -88,6 +89,7 @@
 //            [self.navigationController pushViewController:dv animated:YES];
             
             Game11in5ViewController * dv = [[Game11in5ViewController alloc] init];
+            dv.isHomePush = YES;
             dv.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:dv animated:YES];
         }

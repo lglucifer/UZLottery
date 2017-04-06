@@ -32,6 +32,7 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [MagicalRecord setupAutoMigratingCoreDataStack];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [UZAppStartUp sharedStartUp].rootViewController;
     [self.window makeKeyAndVisible];

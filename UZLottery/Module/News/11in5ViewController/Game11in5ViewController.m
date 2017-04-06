@@ -21,8 +21,11 @@
 //#import "Game11in5Draw.h"
 //#import "GameDrawDao.h"
 //#import "GameDrawModel.h"
+#import "TicketInfo.h"
 
 #import "NavTitleButton.h"
+
+#import "BetContentListViewController.h"
 
 #define DisplayBetInfo(B, M)  [NSString stringWithFormat:@"共%@注 %@元", B, M]
 
@@ -47,6 +50,7 @@
 @property (nonatomic, strong) GameBetFooterView *footerView;
 
 @property (nonatomic, strong) GP11in5Description *gameDescription;
+@property (nonatomic, strong)BetContentListViewController *contentListController;
 
 
 
@@ -100,15 +104,15 @@
     if (_isHomePush == NO) {
        
         
-//        UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        backButton.frame = CGRectMake(0, 0, 54.f, 40.f);
-//        backButton.backgroundColor = [UIColor clearColor];
-//        [backButton setTitle:@"取消" forState:UIControlStateNormal];
-//        [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//        backButton.titleLabel.font = [UIFont systemFontOfSize:17.f];
-//        [backButton addTarget:self action:@selector(backButtonItemAction) forControlEvents:UIControlEventTouchUpInside];
-//        UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
-//        self.navigationItem.leftBarButtonItem = backBarButtonItem;
+        UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        backButton.frame = CGRectMake(0, 0, 54.f, 40.f);
+        backButton.backgroundColor = [UIColor clearColor];
+        [backButton setTitle:@"取消" forState:UIControlStateNormal];
+        [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        backButton.titleLabel.font = [UIFont systemFontOfSize:17.f];
+        [backButton addTarget:self action:@selector(backButtonItemAction) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+        self.navigationItem.leftBarButtonItem = backBarButtonItem;
     }
 
     
@@ -223,7 +227,7 @@
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
 
-//    _contentListController = nil;
+    _contentListController = nil;
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -276,7 +280,13 @@
 
 - (void)delAllTicketInfoData
 {
-  
+    NSArray *arr = [TicketInfo MR_findAll];
+    if ([arr count] > 0) {
+        for (TicketInfo *ti in arr) {
+            [ti MR_deleteEntity];
+            [[ti managedObjectContext] MR_saveToPersistentStoreAndWait];
+        }
+    }
 }
 
 #pragma mark - 晃动
@@ -600,18 +610,72 @@
     
     //投注票内容
     if (verfity) {
-        NSString * n = get_random_uuid();
-
+        if ([_updateNumbers length] > 0) {
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"displayDetail=%@ AND idx=%@", _updateNumbers, _ticketInfoIdx];
+            NSArray *findAllArr = [TicketInfo MR_findAllWithPredicate:predicate];
+            if ([findAllArr count] > 0) {
+                TicketInfo *ticket = [findAllArr lastObject];
+                ticket.idx = _ticketInfoIdx;
+                ticket.displayDetail = displayDetail_;
+                ticket.betDetail = betDetail_;
+                ticket.pickMethod = [NSString stringWithFormat:@"%@", @(picketMethod_)];
+                ticket.betType = [NSString stringWithFormat:@"%@", @(betType_)];
+                ticket.isDirect = [NSString stringWithFormat:@"%@", @(isDirect_)];;
+                ticket.region = @"1";
+                ticket.groupIdx = [NSString stringWithFormat:@"%@", @(groupId_)];
+                ticket.bet = [NSString stringWithFormat:@"%@", @(_betCount)];
+                ticket.money = [NSString stringWithFormat:@"%@", @(_betCount * 2)];
+                ticket.gameType = _titleStr;
+                ticket.subType = subTypeName_;
+                ticket.createTime = [NSDate date];
+                [[ticket managedObjectContext] MR_saveToPersistentStoreAndWait];
+            }
+        }else{
+            NSArray *allTicket = [TicketInfo MR_findAll];
+            NSInteger allCount = [allTicket count];
+            
+            TicketInfo *ticket = [TicketInfo MR_createEntity];
+            ticket.idx = @(allCount+1);
+            ticket.displayDetail = displayDetail_;
+            ticket.betDetail = betDetail_;
+            ticket.pickMethod = [NSString stringWithFormat:@"%@", @(picketMethod_)];
+            ticket.betType = [NSString stringWithFormat:@"%@", @(betType_)];
+            ticket.isDirect = [NSString stringWithFormat:@"%@", @(isDirect_)];;
+            ticket.region = @"1";
+            ticket.groupIdx = [NSString stringWithFormat:@"%@", @(groupId_)];
+            ticket.bet = [NSString stringWithFormat:@"%@", @(_betCount)];
+            ticket.money = [NSString stringWithFormat:@"%@", @(_betCount * 2)];
+            ticket.gameType = _titleStr;
+            ticket.subType = subTypeName_;
+            ticket.createTime = [NSDate date];
+            [[ticket managedObjectContext] MR_saveToPersistentStoreAndWait];
+            
+        }
         
-        NSData *nsdata = [n
-                          dataUsingEncoding:NSUTF8StringEncoding];
-        
-        // Get NSString from NSData object in Base64
-        NSString *base64Encoded = [nsdata base64EncodedStringWithOptions:0];
-        APPFaceSharingView *share = [[APPFaceSharingView alloc] initWithTitle:@"请到附近彩票店投注" qrcodeImage:nil qrcodeImageStr:base64Encoded Desc:nil];
-        
-        [share show];
+        if (_contentListController == nil) {
+            _contentListController = [[BetContentListViewController alloc] init];
+            _contentListController.gameNo = _gameNo;
+            _contentListController.gameName = _gameName;
+            if (_isHomePush) {
+                [self.navigationController pushViewController:_contentListController animated:YES];
+            }else{
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+        }
     }
+//    if (verfity) {
+//        NSString * n = get_random_uuid();
+//
+//        
+//        NSData *nsdata = [n
+//                          dataUsingEncoding:NSUTF8StringEncoding];
+//        
+//        // Get NSString from NSData object in Base64
+//        NSString *base64Encoded = [nsdata base64EncodedStringWithOptions:0];
+//        APPFaceSharingView *share = [[APPFaceSharingView alloc] initWithTitle:@"请到附近彩票店投注" qrcodeImage:nil qrcodeImageStr:base64Encoded Desc:nil];
+//        
+//        [share show];
+//    }
     
     
     

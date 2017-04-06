@@ -32,11 +32,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self showActivityIndicatorTitle:nil inView:self.view];
-    self.view.backgroundColor = [UIColor colorWithRGB:0xd81e06];
+//    [self showActivityIndicatorTitle:nil inView:self.view];
+//    self.view.backgroundColor = [UIColor colorWithRGB:0xd81e06];
+    UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app_launch_image"]];
+    [self.view addSubview:imageV];
+    [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.view).insets(UIEdgeInsetsZero);
+    }];
+    
     __weak __typeof(self) weakSelf = self;
     [[UZSessionManager manager] requestLotteryInfoSuccess:^(UZLotteryAppLaunch *appLaunch, NSURLSessionDataTask *dataTask) {
-        [weakSelf hideWithAfterDelay:YES];
+//        [weakSelf hideWithAfterDelay:YES];
         weakSelf.appLaunch = appLaunch;
         //审核通过
         if (weakSelf.appLaunch.app_status) {

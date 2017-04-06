@@ -1571,7 +1571,7 @@
 				TargetAttributes = {
 					2EDB79BA1E7632010068F544 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4225KQ7WC5;
+						DevelopmentTeam = 4HCT54263P;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -1977,9 +1977,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = UZLottery/UZLottery.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Xinle Tao (CUVR22NJYL)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xinle Tao (CUVR22NJYL)";
-				DEVELOPMENT_TEAM = 4225KQ7WC5;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beibei Xiao (4HCT54263P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beibei Xiao (4HCT54263P)";
+				DEVELOPMENT_TEAM = 4HCT54263P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UZLottery/ThirdSource",
@@ -1991,10 +1991,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/UZLottery/ThirdSource/GtSdkLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uzero.caipiaowht;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skymedia.shishicai3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b1f1ada6-7372-49d4-8fbb-e8142e4eb598";
-				PROVISIONING_PROFILE_SPECIFIER = caipiaodev;
+				PROVISIONING_PROFILE = "12507e86-35f7-4b00-a3c9-1821e537f847";
+				PROVISIONING_PROFILE_SPECIFIER = Shishicai3_Dis_0405;
 				SWIFT_OBJC_BRIDGING_HEADER = "UZLottery-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -2008,9 +2008,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = UZLottery/UZLottery.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Xinle Tao (4225KQ7WC5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xinle Tao (4225KQ7WC5)";
-				DEVELOPMENT_TEAM = 4225KQ7WC5;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beibei Xiao (4HCT54263P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beibei Xiao (4HCT54263P)";
+				DEVELOPMENT_TEAM = 4HCT54263P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UZLottery/ThirdSource",
@@ -2022,10 +2022,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/UZLottery/ThirdSource/GtSdkLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uzero.caipiaowht;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skymedia.shishicai3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "92cdca63-e3d9-4bf2-bb43-20805fca12fb";
-				PROVISIONING_PROFILE_SPECIFIER = caipiaoAdhoc;
+				PROVISIONING_PROFILE = "12507e86-35f7-4b00-a3c9-1821e537f847";
+				PROVISIONING_PROFILE_SPECIFIER = Shishicai3_Dis_0405;
 				SWIFT_OBJC_BRIDGING_HEADER = "UZLottery-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
